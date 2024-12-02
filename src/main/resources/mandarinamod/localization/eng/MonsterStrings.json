@@ -1,0 +1,11 @@
+{
+  "${modID}:DarklingMinion": {
+    "MOVES": [
+      "Chau! Chau!"
+    ],
+    "NAME": "Darkling",
+    "DIALOG": [
+      "Regrowing..."
+    ]
+  }
+}

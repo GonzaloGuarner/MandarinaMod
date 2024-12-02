@@ -1,0 +1,138 @@
+{
+  "${modID}:PowerID": {
+    "NAME": "Ultimate Power",
+    "DESCRIPTIONS": [
+      "You are Very Cool and Strong."
+    ]
+  },
+  "${modID}:InnerFocusPower": {
+    "NAME": "Inner Focus",
+    "DESCRIPTIONS": [
+      "At the end of your turn, if you have no #yBlock, draw #b",
+      " card next turn.",
+      " cards next turn."
+    ]
+  },
+  "${modID}:FlowPower": {
+    "NAME": "Flow",
+    "DESCRIPTIONS": [
+      "You have #b",
+      " #yFlow.",
+      " #yFlow. NL Draw 1 extra card next turn."
+    ]
+  },
+  "${modID}:FlightPower": {
+    "NAME": "Flight",
+    "DESCRIPTIONS": [
+      "Receiving 50% less attack damage. Cancelled if dealt attack damage #b",
+      " times in one turn."
+    ]
+  },
+"${modID}:PressurePower": {
+    "NAME": "Pressure",
+    "DESCRIPTIONS": [
+      "Whenever #yPressure triggers, loses #b",
+      " HP."
+    ]
+  },
+  "${modID}:StaticChargePower": {
+    "NAME": "Static Charge",
+    "DESCRIPTIONS": [
+      "When attacked, deals #b",
+      " damage to ALL enemies once.",
+      " damage back once."
+    ]
+  },
+  "${modID}:ElectricPotentialPower": {
+    "NAME": "Electric Potential",
+    "DESCRIPTIONS": [
+      "Whenever you lose HP, gain #b",
+      " #yStatic #yCharge."
+    ]
+  },
+  "${modID}:ThunderClapped": {
+    "NAME": "Thunderclapped",
+    "DESCRIPTIONS": [
+      "Whenever you attack this enemy, deal #b",
+      " damage to all enemies."
+    ]
+  },
+  "${modID}:KindleSpiritPower": {
+    "NAME": "Kindle Spirit",
+    "DESCRIPTIONS": [
+      "At the start of your turn, add a #ySpark to your hand."
+    ]
+  },
+  "${modID}:PhoenixTenacityPower": {
+    "NAME": "Phoenix Tenacity",
+    "DESCRIPTIONS": [
+      "Whenever you draw or #yExhaust a #yStatus card, apply #b",
+      " #yBurnt to the leftmost enemy. NL If you draw a #yBurn, exhaust it immediately."
+    ]
+  },
+  "${modID}:IgnitePower": {
+    "NAME": "Ignite",
+    "DESCRIPTIONS": [
+      "Whenever you deal unblocked attack damage, apply #b",
+      " #yBurnt to the target."
+    ]
+  },
+  "${modID}:BurntPower": {
+    "NAME": "Burnt",
+    "DESCRIPTIONS": [
+      "At the start of its turn, loses #b",
+      " HP. Then, #yBurnt reduce stacks by half."
+    ]
+  },
+  "${modID}:GustAspectPower": {
+    "NAME": "Gust Aspect",
+    "DESCRIPTIONS": [
+      "At the end of your turn, gain #b",
+      " #yFlow."
+    ]
+  },
+  "${modID}:ThunderAspectPower": {
+    "NAME": "Thunder Aspect",
+    "DESCRIPTIONS": [
+      "At the end of your turn, deal #b",
+      " damage to ALL enemies."
+    ]
+  },
+  "${modID}:FlameAspectPower": {
+    "NAME": "Flame Aspect",
+    "DESCRIPTIONS": [
+      "The next attack gains #b",
+      " damage. Each subsequent attack gains #b",
+      " more damage. Resets at end of turn."
+    ]
+  },
+  "${modID}:ShadowAspectPower": {
+    "NAME": "Shadow Aspect",
+    "DESCRIPTIONS": [
+      "At the start of your turn, EVERYONE gains #b",
+      " #yBlock. NL At the end of your turn, steal",
+      " half of EVERYONE's #yBlock.",
+      " ALL of EVERYONE's #yBlock."
+    ]
+  },
+  "${modID}:VoidStalkerPower": {
+    "NAME": "Void Stalker",
+    "DESCRIPTIONS": [
+      "Enter #rVoid #rForm in ",
+      " turn.",
+      " turns."
+    ]
+  },
+  "${modID}:VoidFormPower": {
+    "NAME": "Void Form",
+    "DESCRIPTIONS": [
+      "Increased damage. Deal double damage if affected by #yShadow #yAspect."
+    ]
+  },
+  "${modID}:PerfectPositionPower": {
+    "NAME": "Perfect Position",
+    "DESCRIPTIONS": [
+      "This turn, all #yOdd, #yEven, #yThird effects always trigger on play."
+    ]
+  }
+}
