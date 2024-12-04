@@ -25,12 +25,12 @@ public class AuroraRay extends BaseCard {
             CardType.ATTACK,           // This is an attack card
             CardRarity.RARE,           // Rare card rarity
             CardTarget.ENEMY,          // Targets a single enemy
-            6                          // Initial cost is 6 energy
+            5                          // Initial cost is 6 energy
     );
 
-    private static final int DAMAGE = 62;          // Base damage value
-    private static final int UPGRADE_DAMAGE = 6;  // Damage increase when upgraded
-    private static final int UPGRADE_COST = 5;    // Reduced cost when upgraded
+    private static final int DAMAGE = 52;          // Base damage value
+    private static final int UPGRADE_DAMAGE = 0;  // Damage increase when upgraded
+    private static final int UPGRADE_COST = 4;    // Reduced cost when upgraded
 
     public AuroraRay() {
         super(ID, info);

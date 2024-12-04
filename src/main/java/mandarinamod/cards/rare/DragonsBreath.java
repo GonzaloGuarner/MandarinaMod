@@ -62,13 +62,15 @@ public class DragonsBreath extends BaseCard implements BranchingUpgradesCard {
         }
     }
 
+
     @Override
     public void applyPowers() {
-        super.applyPowers(); // Ensure default behavior is preserved
+        super.applyPowers();
         if (CardCrawlGame.dungeon != null && AbstractDungeon.currMapNode != null) {
             this.configureCosts();
         }
     }
+
 
     public void configureCosts() {
         MonsterGroup monsterGroup = AbstractDungeon.getMonsters();
@@ -82,22 +84,15 @@ public class DragonsBreath extends BaseCard implements BranchingUpgradesCard {
                         : 0)
                 .sum();
 
-        int modifiedCost = Math.max(0, this.cost - (totalBurnt / customVar("burntthreshold"))); // Reduce cost based on Burnt stacks
-        if (this.cost != modifiedCost) {
-            this.cost = modifiedCost;
+        int modifiedCost = Math.max(0, this.baseCost - (totalBurnt / customVar("burntthreshold"))); // Reduce cost based on Burnt stacks
+        if (this.baseCost != modifiedCost) {
+            updateCost(modifiedCost-baseCost);
             if(this.cost != baseCost){
                 this.isCostModified = true; // Mark that the cost is modified
             }
         }
     }
 
-
-    @Override
-    public void onMoveToDiscard() {
-        super.onMoveToDiscard();
-        this.cost = this.baseCost;
-        this.isCostModified = false; // Reset modification flag
-    }
 
     @Override
     public void upgrade() {

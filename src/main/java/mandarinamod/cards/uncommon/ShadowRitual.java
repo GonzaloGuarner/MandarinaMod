@@ -92,7 +92,7 @@ public class ShadowRitual extends BaseCard {
                     int vulnerable = upgraded ? UPGRADE_VULNERABLE : VULNERABLE_DURATION;
                     int drawAmount = upgraded ? UPGRADE_DRAW : DRAW_CARDS;
                     int energyGain = upgraded ? UPGRADE_ENERGY : ENERGY_GAIN;
-                    this.rawDescription = "Apply " + vulnerable + " Vulnerable to ALL enemies. NL If this is the 3rd card played this turn, draw " + drawAmount + " cards, gain " + energyGain + " [E] and Exhaust.";
+                    this.rawDescription = "Apply " + vulnerable + " Vulnerable to ALL enemies. NL Third: Draw " + drawAmount + " cards, gain " + energyGain + " [E] and Exhaust.";
 
                     initializeDescription();
 

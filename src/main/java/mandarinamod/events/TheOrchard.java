@@ -26,7 +26,7 @@ public class TheOrchard extends AbstractImageEvent {
     private CUR_SCREEN screen;
 
     public TheOrchard() {
-        super(NAME, DESCRIPTIONS[0], "mandarinamod/images/events/TheOrchard1536.png");
+        super(NAME, DESCRIPTIONS[0], "mandarinamod/images/events/TheOrchard.png");
         this.screen = CUR_SCREEN.INTRO;
 
         imageEventText.setDialogOption(OPTIONS[0]); // Gain two relics, lose 30% HP

@@ -11,7 +11,9 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
 import mandarinamod.actions.ClawFrenzyAction;
+import mandarinamod.util.ColorUtils;
 import mandarinamod.util.CustomTags;
 import mandarinamod.vfx.combat.ClawEffect;
 import mandarinamod.MandarinaMod;
@@ -56,7 +58,7 @@ public class ClawFrenzy extends BaseCard {
         addToBot(new ClawFrenzyAction(p, m, this.damage, this.damageTypeForTurn, this.freeToPlayOnce, this.energyOnUse));
         // Apply Vulnerable to self
         addToBot(new ApplyPowerAction(p, p,
-                new com.megacrit.cardcrawl.powers.VulnerablePower(p, this.magicNumber, false),
+                new VulnerablePower(p, this.magicNumber, false),
                 this.magicNumber));
     }
 
@@ -69,11 +71,11 @@ public class ClawFrenzy extends BaseCard {
         // Odd amount of cards played before
         if (CardUtils.isOddPosition()) {
             // Set the glow color to green if card would be even
-            this.glowColor = GREEN_BORDER_GLOW_COLOR.cpy();
+            this.glowColor = ColorUtils.MAGENTA_GLOW.cpy();
         }
         if (CardUtils.isPerfectPosition()) {
             // Set the glow color to gold
-            this.glowColor = GOLD_BORDER_GLOW_COLOR.cpy();
+            this.glowColor = ColorUtils.GOLD_GLOW.cpy();
         }
     }
     @Override

@@ -29,6 +29,7 @@ public class OddOdds extends BaseCard {
 
     public OddOdds() {
         super(ID, info);
+        setCostUpgrade(0);
         setExhaust(true);
     }
 
@@ -39,14 +40,6 @@ public class OddOdds extends BaseCard {
         options.add(new SkillGuessChoice());
         options.add(new NeitherGuessChoice());
         addToBot(new ChooseOneAction(options));
-    }
-
-    @Override
-    public void upgrade() {
-        if (!upgraded) {
-            upgradeName();
-            this.cost = 0;
-        }
     }
 
     @Override

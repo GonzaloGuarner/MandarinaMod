@@ -43,7 +43,7 @@ public class ClawFrenzyAction extends AbstractGameAction {
             effect += 2;
             p.getRelic("Chemical X").flash();
         }
-        boolean extraHit = CardUtils.isEvenPosition();
+        boolean extraHit = CardUtils.isOddPosition() || CardUtils.isPerfectPosition();
         if (extraHit) {
             effect += 1;
         }
