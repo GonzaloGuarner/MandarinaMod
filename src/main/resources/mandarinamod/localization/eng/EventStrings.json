@@ -25,11 +25,9 @@
       "After you have made your choice, you feel the effects resonate through your body. The orchard seems to darken as the magic dissipates. You take a moment to admire the mystical grove before you continue your journey."
     ],
     "OPTIONS": [
-      "[Forbidden Fruit] Gain 2 Relics. #rLose #r30% #rof #ryour #rHP.",
-      "[Healing Berry] #gFully #gheal #gHP, but lose #r1 #rStrength for the next 2 battles.",
+      "[Withered Apple] #gFully #gheal #gHP, but gain #r2 #Languor.",
       "[Golden Citrus] Gain #g100 #gGold, but lose a #rrandom card.",
-      "[Shadow Aspect] Add the #gShadow #gAspect #gpower card to your deck.",
-      "[Withered Apple] Remove 2 #rCurses from your deck, but add a #rnegative status."
+      "[Forbidden Fruit] Gain 2 Relics. #rLose #r30% #rof #ryour #rHP."
     ]
   }
 }

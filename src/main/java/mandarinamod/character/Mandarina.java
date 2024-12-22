@@ -16,7 +16,6 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
-import com.megacrit.cardcrawl.relics.BurningBlood;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import hlysine.friendlymonsters.characters.AbstractPlayerWithMinions;
 import mandarinamod.cards.basic.*;
@@ -24,6 +23,7 @@ import mandarinamod.cards.common.*;
 import mandarinamod.cards.rare.*;
 import mandarinamod.cards.tempcards.*;
 import mandarinamod.cards.uncommon.*;
+import mandarinamod.relics.TheCycle;
 
 import java.util.ArrayList;
 
@@ -63,8 +63,8 @@ public class Mandarina extends AbstractPlayerWithMinions {
         private static final String BG_ATTACK_P = characterPath("cardback/bg_attack_p.png");
         private static final String BG_SKILL = characterPath("cardback/bg_skills.png");
         private static final String BG_SKILL_P = characterPath("cardback/bg_skills_p.png");
-        private static final String BG_POWER = characterPath("cardback/bg_powerd.png");
-        private static final String BG_POWER_P = characterPath("cardback/bg_powerd_p.png");
+        private static final String BG_POWER = characterPath("cardback/bg_power.png");
+        private static final String BG_POWER_P = characterPath("cardback/bg_power_p.png");
         private static final String ENERGY_ORB = characterPath("cardback/energy_orb.png");
         private static final String ENERGY_ORB_P = characterPath("cardback/energy_orb_p.png");
         private static final String SMALL_ORB = characterPath("cardback/small_orb.png");
@@ -145,15 +145,16 @@ public class Mandarina extends AbstractPlayerWithMinions {
         ArrayList<String> retVal = new ArrayList<>();
         //List of IDs of cards for your starting deck.
         //If you want multiple of the same card, you have to add it multiple times.
-//        retVal.add(Strike.ID);
-//        retVal.add(Strike.ID);
-//        retVal.add(Strike.ID);
-//        retVal.add(Strike.ID);
-//        retVal.add(Defend.ID);
-//        retVal.add(Defend.ID);
-//        retVal.add(Defend.ID);
-//        retVal.add(Defend.ID);
-//        retVal.add(Meditate.ID);
+        retVal.add(Strike.ID);
+        retVal.add(Strike.ID);
+        retVal.add(Strike.ID);
+        retVal.add(Strike.ID);
+        retVal.add(Defend.ID);
+        retVal.add(Defend.ID);
+        retVal.add(Defend.ID);
+        retVal.add(Defend.ID);
+        retVal.add(SwiftJab.ID);
+        retVal.add(Recall.ID);
 //        retVal.add(PastPresentFuture.ID);
 //        retVal.add(PositionalStrike.ID);
 //        retVal.add(PerfectPosition.ID);
@@ -163,13 +164,13 @@ public class Mandarina extends AbstractPlayerWithMinions {
 //        retVal.add(BlazingGuard.ID);
 //        retVal.add(Tornado.ID);
 //        retVal.add(ReboundKick.ID);
+  //      retVal.add(OddOdds.ID);
 ////        retVal.add(OddOdds.ID);
 ////        retVal.add(OddOdds.ID);
 ////        retVal.add(OddOdds.ID);
-////        retVal.add(OddOdds.ID);
-        retVal.add(AuroraRay.ID);
-        retVal.add(AuroraRay.ID);
-        retVal.add(LightningConduit.ID);
+//        retVal.add(AuroraRay.ID);
+//        retVal.add(AuroraRay.ID);
+//        retVal.add(LightningConduit.ID);
 //        retVal.add(TimelyBoost.ID);
 //        retVal.add(OddSmokes.ID);
 //        retVal.add(BlazingGuard.ID);
@@ -205,7 +206,7 @@ public class Mandarina extends AbstractPlayerWithMinions {
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
         //IDs of starting relics. You can have multiple, but one is recommended.
-        retVal.add(BurningBlood.ID);
+        retVal.add(TheCycle.ID);
 
         return retVal;
     }
@@ -214,7 +215,7 @@ public class Mandarina extends AbstractPlayerWithMinions {
     public AbstractCard getStartCardForEvent() {
         //This card is used for the Gremlin card matching game.
         //It should be a non-strike non-defend starter card, but it doesn't have to be.
-        return new Meditate();
+        return new Recall();
     }
 
     /*- Below this is methods that you should *probably* adjust, but don't have to. -*/

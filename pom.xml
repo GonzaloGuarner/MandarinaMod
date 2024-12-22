@@ -3,7 +3,7 @@
 
     <properties>
         <modID>mandarinamod</modID>
-        <author>Mapuche slashes in front of them like this</author>
+        <author>Mapuche slashes</author>
 
         <!-- Change the path for your system to match your Steam installation. -->
         <!-- If you're not sure, go to Slay the Spire in the Steam library, and choose Manage -> Browse local files -->
@@ -27,9 +27,28 @@
     <version>0.0.1</version>
     <!-- Avoid using \ in this description, as they can cause the description to fail to load. -->
     <!-- If you really want to use them, you'll need to "escape" them by putting another one in front, like \\ -->
-    <description>This is a description!\n"This" is a second line of description.
-        This "\\" is a slash. If you add another line like this:
-        All the spaces on the left of this will be gone. If you want spacing on a new line, do it:\n    like this.</description>
+    <description>
+        Mandarina was once a spirited player of games of luck and mischief,\n
+        always seeking the next clever trick or cheeky move to outwit his friends and foes.\n
+        \n
+        But one fateful day, his life took an unforeseen turn—\n
+        a game he couldn't win and a debt he couldn't escape.\n
+        He's now trapped in the spire. \n
+        \n
+        Ascending like a chaotic vortex. \n
+        Striking with thunderous precision.\n
+        Sometimes burning in flames.\n
+        Sometimes looming in the shadows.
+        \n
+        What drives him? Revenge? Redemption? Or the burning desire to prove that even the most elusive forces\n
+        can be wielded not by a steady hand but by the most volatile of them all.
+        \n
+        Will his cunning be enough to outplay his past and reclaim his joy?\n
+        Or will the final game consume him into an empty void?\n
+        \n
+        It's your move.
+    </description>
+
 
     <!--You shouldn't need to change anything below this point, but feel free to look at it.-->
     <!--You'll get a warning regarding these when you package your mod, but don't worry, it's just set up like this for convenience.-->

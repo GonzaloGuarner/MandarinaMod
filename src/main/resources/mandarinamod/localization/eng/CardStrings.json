@@ -17,9 +17,9 @@
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! Block."
   },
-  "${modID}:Meditate": {
-    "NAME": "Meditate",
-    "DESCRIPTION": "Gain !B! Block. Return a card from your discard pile to your hand."
+  "${modID}:Recall": {
+    "NAME": "Recall",
+    "DESCRIPTION": "Gain !B! Block. NL ${modID}:Odd: Place a card from your discard pile on top of your draw pile."
   },
   "${modID}:Spark": {
     "NAME": "Spark",

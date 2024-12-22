@@ -1,6 +1,6 @@
-package mandarinamod.cards.common;
+package mandarinamod.cards.basic;
 
-import com.badlogic.gdx.graphics.Color;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.DiscardAction;
@@ -26,7 +26,7 @@ public class SwiftJab extends BaseCard {
             0                          // Costs 0 energy
     );
 
-    private static final int DAMAGE = 4;             // Base damage (adjust to match SparkJab)
+    private static final int DAMAGE = 3;             // Base damage (adjust to match SparkJab)
     private static final int UPGRADE_DAMAGE = 2;     // Increase damage by 2 when upgraded
 
     public SwiftJab() {
@@ -42,7 +42,7 @@ public class SwiftJab extends BaseCard {
         addToBot(new DamageAction(
                 m,
                 new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL),
-                com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+                AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         if(CardUtils.isEvenPosition() || CardUtils.isPerfectPosition()){
             if (!upgraded) {
                 // Unupgraded: Discard 1 card, then draw 1 card

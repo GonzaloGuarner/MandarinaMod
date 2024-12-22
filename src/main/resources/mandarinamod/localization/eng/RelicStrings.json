@@ -1,0 +1,22 @@
+{
+  "${modID}:RelicID": {
+    "NAME": "Good Relic",
+    "FLAVOR": "The Cycle never really ends...",
+    "DESCRIPTIONS": [
+      "At the start of your turn ",
+      "At the start of your turn "
+    ]
+  },
+  "${modID}:TheCycle": {
+    "NAME": "The Cycle",
+    "FLAVOR": "The elements endlessly turn, granting gifts of nature's power.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, gain a bonus from the current element: NL ",
+      "#yGust: Draw #b1 card. NL ",
+      "#yThunder: Gain #b7 Gold. NL ",
+      "#yFlame: Reduce the cost of a random card in your hand by #b1. NL ",
+      "#yShadow: Heal #b2 HP and gain #b2 Cursed Block. NL ",
+      "The elements cycle every combat."
+    ]
+  }
+}
