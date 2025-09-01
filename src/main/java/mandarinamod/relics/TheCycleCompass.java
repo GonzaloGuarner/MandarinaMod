@@ -15,8 +15,8 @@ import mandarinamod.actions.ReduceCostRandomAction;
 import mandarinamod.character.Mandarina;
 import mandarinamod.powers.CursedBlock;
 
-public class TheCycle extends BaseRelic {
-    private static final String NAME = "TheCycle";
+public class TheCycleCompass extends BaseRelic {
+    private static final String NAME = "TheCycleCompass";
     public static final String ID = MandarinaMod.makeID(NAME);
     private static final RelicStrings strings = CardCrawlGame.languagePack.getRelicStrings(ID);
 
@@ -27,7 +27,7 @@ public class TheCycle extends BaseRelic {
     private boolean shadowPending = false;
     private int initCounter = -1;
 
-    public TheCycle() {
+    public TheCycleCompass() {
         super(ID, NAME, Mandarina.Meta.CARD_COLOR, RelicTier.STARTER, LandingSound.MAGICAL);
         this.counter = -1;
     }
@@ -66,7 +66,6 @@ public class TheCycle extends BaseRelic {
         }
         if (shadowPending) {
             AbstractDungeon.player.heal(2);
-            addToBot(new GainBlockAction(AbstractDungeon.player, 2));
             addToBot(new GainCustomBlockAction(new BlockModContainer(this, new CursedBlock()), AbstractDungeon.player, 2));
             shadowPending = false;
         }
@@ -118,8 +117,6 @@ public class TheCycle extends BaseRelic {
                 description.append(strings.DESCRIPTIONS[4]);
                 break;
         }
-
-        description.append(strings.DESCRIPTIONS[5]); // "The elements cycle every combat."
         return description.toString();
     }
 }

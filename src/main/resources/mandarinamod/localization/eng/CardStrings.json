@@ -65,10 +65,10 @@
     "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable."
   },
-  "${modID}:SmogWave": {
-    "NAME": "Smog Wave",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !B! *Cursed *Block.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain !B! *Cursed *Block."
+  "${modID}:SmogBall": {
+    "NAME": "Smog Ball",
+    "DESCRIPTION": "Target gains !B! *Cursed *Block. NL Deal !D! damage.",
+    "UPGRADE_DESCRIPTION": "Target gains !B! *Cursed *Block. NL Deal !D! damage."
   },
   "${modID}:GetSomeShade": {
     "NAME": "Get Some Shade",
@@ -326,8 +326,8 @@
   },
   "${modID}:DrunkenMaster": {
     "NAME": "Drunken Master",
-    "DESCRIPTION": "Gain 1 Confusion.",
-    "UPGRADE_DESCRIPTION": "Gain 1 Confusion."
+    "DESCRIPTION": "Gain 1 *Confusion.",
+    "UPGRADE_DESCRIPTION": "Gain 1 *Confusion."
   },
   "${modID}:ClawFrenzy": {
     "NAME": "Claw Frenzy",
@@ -374,8 +374,8 @@
   },
   "${modID}:ShadowRitual": {
     "NAME": "Shadow Ritual",
-    "DESCRIPTION": "Gain !B! Block. NL ${modID}:Even: The [#FFFDE5]ritual continues.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL ${modID}:Even: The [#FFFDE5]ritual continues.",
+    "DESCRIPTION": "Gain !B! Block. NL ${modID}:Even: The [#FFFDE5]ritual starts.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL ${modID}:Even: The [#FFFDE5]ritual starts.",
     "EXTENDED_DESCRIPTION": [
       "Apply 1 Weak to ALL enemies. NL ${modID}:Odd: The [#FFFDE5]ritual continues.",
       "Apply 1 Vulnerable to ALL enemies. NL If this is the 3rd card played this turn, draw 2 cards, gain 3 [E], and Exhaust this card.",
@@ -384,8 +384,8 @@
   },
   "${modID}:OddSmokes": {
     "NAME": "Odd Smokes",
-    "DESCRIPTION": "Gain !B! *Cursed *Block. NL ${modID}:Odd: EVERYONE gains !M! *Cursed *Block.",
-    "UPGRADE_DESCRIPTION": "Gain !B! *Cursed *Block. NL ${modID}:Odd: EVERYONE gains !M! *Cursed *Block."
+    "DESCRIPTION": "Gain !B! Block. NL ${modID}:Odd: EVERYONE gains !M! *Cursed *Block.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL ${modID}:Odd: EVERYONE gains !M! *Cursed *Block."
   },
   "${modID}:DarklingPact":{
   "NAME": "Darkling Pact",

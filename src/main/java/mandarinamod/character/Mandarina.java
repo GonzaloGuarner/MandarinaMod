@@ -19,11 +19,7 @@ import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import hlysine.friendlymonsters.characters.AbstractPlayerWithMinions;
 import mandarinamod.cards.basic.*;
-import mandarinamod.cards.common.*;
-import mandarinamod.cards.rare.*;
-import mandarinamod.cards.tempcards.*;
-import mandarinamod.cards.uncommon.*;
-import mandarinamod.relics.TheCycle;
+import mandarinamod.relics.TheCycleCompass;
 
 import java.util.ArrayList;
 
@@ -121,7 +117,7 @@ public class Mandarina extends AbstractPlayerWithMinions {
     public Mandarina() {
         super(getNames()[0], Meta.MANDARINA,
                 new CustomEnergyOrb(orbTextures, characterPath("energyorb/vfx.png"), layerSpeeds), //Energy Orb
-                new SpriterAnimation(characterPath("animation/mandarinabasic.scml"))); //Animation
+                new SpriterAnimation(characterPath("animation/mandarinacomplex.scml"))); //Animation
 
         initializeClass(characterPath(null), //"MandarinaStaticSmallest.png"),
                 SHOULDER_2,
@@ -206,7 +202,7 @@ public class Mandarina extends AbstractPlayerWithMinions {
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
         //IDs of starting relics. You can have multiple, but one is recommended.
-        retVal.add(TheCycle.ID);
+        retVal.add(TheCycleCompass.ID);
 
         return retVal;
     }

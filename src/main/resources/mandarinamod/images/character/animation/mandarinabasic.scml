@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <spriter_data scml_version="1.0" generator="BrashMonkey Spriter" generator_version="r11">
     <folder id="0">
-        <file id="0" name="Body.png" width="242" height="191" pivot_x="0" pivot_y="0"/>
-        <file id="1" name="Head.png" width="133" height="115" pivot_x="0" pivot_y="0"/>
+        <file id="0" name="Body.png" width="146" height="217" pivot_x="0" pivot_y="0"/>
+        <file id="1" name="Head.png" width="98" height="101" pivot_x="0" pivot_y="0"/>
     </folder>
     <entity id="0" name="entity_000">
         <animation id="0" name="NewAnimation" length="3000" interval="100">
@@ -28,7 +28,7 @@
                     <object_ref id="1" timeline="1" key="4" z_index="1"/>
                 </key>
             </mainline>
-            <timeline id="0" name="Body">
+            <timeline id="0" name="Torso">
                 <key id="0" spin="0">
                     <object folder="0" file="0" x="-152" y="-10"/>
                 </key>

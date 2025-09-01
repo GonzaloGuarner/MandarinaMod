@@ -21,7 +21,7 @@ public class SwiftJab extends BaseCard {
     private static final CardStats info = new CardStats(
             Mandarina.Meta.CARD_COLOR, // Card color for Mandarina
             CardType.ATTACK,           // Card type
-            CardRarity.COMMON,         // Common rarity
+            CardRarity.BASIC,         // Common rarity
             CardTarget.ENEMY,          // Targets a single enemy
             0                          // Costs 0 energy
     );
@@ -33,7 +33,6 @@ public class SwiftJab extends BaseCard {
         super(ID, info);
         setDamage(DAMAGE, UPGRADE_DAMAGE);
         initializeDescription();
-        tags.add(CustomTags.EVEN);
     }
 
     @Override

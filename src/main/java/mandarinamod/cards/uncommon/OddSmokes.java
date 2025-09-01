@@ -2,6 +2,7 @@ package mandarinamod.cards.uncommon;
 
 import com.evacipated.cardcrawl.mod.stslib.actions.common.GainCustomBlockAction;
 import com.evacipated.cardcrawl.mod.stslib.blockmods.BlockModifierManager;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -34,7 +35,7 @@ public class OddSmokes extends BaseCard {
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 
-    private static final int BLOCK = 8;
+    private static final int BLOCK = 6;
     private static final int UPGRADE_BLOCK = 2;
     private static final int SMOKE_BLOCK = 4;
     private static final int SMOKE_BLOCK_UPG = 2;
@@ -49,7 +50,7 @@ public class OddSmokes extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new GainCustomBlockAction(this, AbstractDungeon.player, this.block)); // Grant block to the player
+        addToBot(new GainBlockAction(AbstractDungeon.player, this.block)); // Grant block to the player
 
         // Check if the card is played in an odd position
         if (CardUtils.isOddPosition() || CardUtils.isPerfectPosition()) { // Odd position: 1st, 3rd, 5th, etc.
