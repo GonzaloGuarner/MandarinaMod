@@ -1,3 +1,6 @@
+
+# The Mandarina Mod:
+
 Mandarina is a custom Slay the Spire character built around dynamic elemental synergies, positional mechanics, and multi-use cards. It's a character that rewards strategic sequencing and embraces fun-centric deck-building. Mandarina is a master of the volatile elements (or aspects) which are Gust, Thunder, Flame, and Shadow. These elements have been learnt at different stages of its erratic lifespan. Mandarina does not use weapons but rather different fighting techniques. And its claws, it is a Tiger, after all
 
 ## Mechanics:
@@ -49,13 +52,10 @@ Some cards have branching upgrades, giving you even more options to set up a per
 ### Some card examples
 
 Gust cards:
-![img_2.png](Gust12.png)
+![img_2.png](utilities/readme/Gust12.png)
 
 Thunder cards:
-![img_1.png](Thunder12.png)
+![img_1.png](utilities/readme/Thunder12.png)
 
 Flame cards:
-![img.png](Flame12.png)
-
-240
-122x244
+![img.png](utilities/readme/Flame12.png)
