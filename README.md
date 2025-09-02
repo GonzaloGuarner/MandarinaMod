@@ -1,36 +1,61 @@
-# Basic Mod
+Mandarina is a custom Slay the Spire character built around dynamic elemental synergies, positional mechanics, and multi-use cards. It's a character that rewards strategic sequencing and embraces fun-centric deck-building. Mandarina is a master of the volatile elements (or aspects) which are Gust, Thunder, Flame, and Shadow. These elements have been learnt at different stages of its erratic lifespan. Mandarina does not use weapons but rather different fighting techniques. And its claws, it is a Tiger, after all
 
-This is an empty Slay the Spire mod + a modding tutorial.
+## Mechanics:
 
-This tutorial will help with setup and the basics of Slay the Spire modding, but it will not teach you Java. If you know nothing of Java or programming in general, you are strongly recommended to look up a free online course and do at least some of it. It is possible to do modding with almost no proper knowledge, but it will make things much more difficult.
+Order/Positional Play:
 
----
+Some of Mandarina’s cards reward the order (or timing) in which cards are played. For instance:
 
-## Check the wiki to get started:
+Odd: Triggers when the card is played 1st, 3rd, 5th… in a turn.
 
-https://github.com/Alchyr/BasicMod/wiki
+Even: Triggers effect when the card is played 2nd, 4th in a turn.
 
----
+Third: You guessed it, triggers when played 3rd.
 
-## Know what you're doing?
+### Elemental aspects:
 
-You can still use this mod as a base, or you could use another template like https://github.com/DarkVexon/ProTemplate
+Gust 🌀
 
-You can find more options in the pins of the #modding-technical channel in the Slay the Spire discord server.
+Generates and consumes Flow to draw cards and fuel combos. Focuses on random attacks and energy-efficient turns too. Agile, random.
 
----
+Thunder ⚡
 
-### Some HD Slay the Spire art assets (courtesy of Gremious, creator of DefaultMod):
+Reactive mechanics that deal damage when attacked, many small AOE damage instances. Reactive, AOE, and well, Aurora Ray.
 
-Includes:
-- Empty Relic Template feat. empty bottle
-- Empty Card Template
-- Color-Changable cardback
-- A couple of HD Monster vectors (Louse, Nob, Sentry, Sneaky Gremlin)
-- A coupe of HD items (J.A.X., A Coin)
-- 2 people silhouettes
-- A curse Background
+Flame 🔥
 
-https://github.com/Gremious/StS-DefaultModBase#some-hd-slay-the-spire-art-assets
+Multi-hit attacks, base attack damage increase on use, Burnt debuff. Ramping, multi-hit, multi-attack turns, burnt generation.
 
----
+Shadow 🌑
+
+Subtle control with the debuff-heavy and double-edged Cursed Block playstyles, some other odd cards. Block, high-risk high-reward, debuff-heavy
+
+All aspects have some block, draw and energy generation.
+
+### Elemental mechanics:
+
+Flow : If you have at least 3 Flow stacks, draw 1 extra card at the start of your turn and lose 1 stack of Flow.
+Which can be spent or accumulated for combo effects.
+
+Static: When attacked, deal damage back. If you have Thunder Aspect, hit ALL enemies.
+
+Burnt : Burnt creatures lose HP at the end of their turn. Each turn, Burnt is reduced by half.
+
+Cursed Block : Protects creatures from damage. If broken, they gain Poison equal to half the block lost.
+
+### Other:
+
+Some cards have branching upgrades, giving you even more options to set up a perfect deck.
+### Some card examples
+
+Gust cards:
+![img_2.png](Gust12.png)
+
+Thunder cards:
+![img_1.png](Thunder12.png)
+
+Flame cards:
+![img.png](Flame12.png)
+
+240
+122x244

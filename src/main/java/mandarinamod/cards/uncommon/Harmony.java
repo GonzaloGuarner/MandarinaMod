@@ -40,12 +40,12 @@ public class Harmony extends BaseCard implements BranchingUpgradesCard {
     private static final int SPARK_AMOUNT = 1;
 
     private static final int FLOW_UPGRADE_1 = 1;
-    private static final int STATIC_CHARGE_UPGRADE_1 = 1;
+    private static final int STATIC_CHARGE_UPGRADE_1 = 4;
     private static final int CURSED_BLOCK_UPGRADE_1 = 2;
 
-    private static final int FLOW_UPGRADE_2 = 2;
-    private static final int STATIC_CHARGE_UPGRADE_2 = 5;
-    private static final int CURSED_BLOCK_UPGRADE_2 = 6;
+    private static final int FLOW_UPGRADE_2 = 0;
+    private static final int STATIC_CHARGE_UPGRADE_2 = 2;
+    private static final int CURSED_BLOCK_UPGRADE_2 = 4;
     private static final int SPARKS_UPGRADE_2 = 1;
 
     private int staticChargeAmount = 1;
@@ -79,7 +79,7 @@ public class Harmony extends BaseCard implements BranchingUpgradesCard {
         // Apply Cursed Block
         addToBot(new GainCustomBlockAction(this, player, this.block));
 
-        // Play sound effect (optional for thematic flair)
+        // Play sound effect
 //        addToBot(new SFXAction("THUNDER_CLAP"));
     }
 
@@ -100,7 +100,7 @@ public class Harmony extends BaseCard implements BranchingUpgradesCard {
         // Upgrade 1: Increases values, retains cost 1
         upgradeMagicNumber(FLOW_UPGRADE_1);
         staticChargeAmount+=STATIC_CHARGE_UPGRADE_1;
-        spark.upgrade();
+        //spark.upgrade();
         upgradeBlock(CURSED_BLOCK_UPGRADE_1);
         cardsToPreview = spark;
         this.rawDescription = UPGRADE_DESCRIPTION;
