@@ -134,5 +134,11 @@
     "DESCRIPTIONS": [
       "This turn, all #yOdd, #yEven, #yThird effects always trigger on play."
     ]
+  },
+  "${modID}:LifeLinkPower": {
+    "NAME": "Life Link",
+    "DESCRIPTIONS": [
+      "If the other linked partner is still alive, revives in #b2 turns at #b10 HP."
+    ]
   }
 }

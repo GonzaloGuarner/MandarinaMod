@@ -19,6 +19,9 @@ import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import hlysine.friendlymonsters.characters.AbstractPlayerWithMinions;
 import mandarinamod.cards.basic.*;
+import mandarinamod.cards.rare.DarklingPact;
+import mandarinamod.cards.rare.ShadowAspect;
+import mandarinamod.cards.uncommon.OddSmokes;
 import mandarinamod.relics.TheCycleCompass;
 
 import java.util.ArrayList;
@@ -132,8 +135,8 @@ public class Mandarina extends AbstractPlayerWithMinions {
         dialogY = (drawY + 220.0F * Settings.scale);
 
         setBaseMinionCount(1);
-        setBaseMinionPowerChance(0.4f);
-        setBaseMinionAttackTargetChance(0.4f);
+        setBaseMinionPowerChance(0.5f);
+        setBaseMinionAttackTargetChance(0.5f);
     }
 
     @Override
@@ -161,14 +164,11 @@ public class Mandarina extends AbstractPlayerWithMinions {
 //        retVal.add(Tornado.ID);
 //        retVal.add(ReboundKick.ID);
   //      retVal.add(OddOdds.ID);
-////        retVal.add(OddOdds.ID);
-////        retVal.add(OddOdds.ID);
-////        retVal.add(OddOdds.ID);
 //        retVal.add(AuroraRay.ID);
 //        retVal.add(AuroraRay.ID);
 //        retVal.add(LightningConduit.ID);
 //        retVal.add(TimelyBoost.ID);
-//        retVal.add(OddSmokes.ID);
+        retVal.add(OddSmokes.ID);
 //        retVal.add(BlazingGuard.ID);
 //        retVal.add(PushThrough.ID);
 //        retVal.add(ShadowRitual.ID);
@@ -176,7 +176,7 @@ public class Mandarina extends AbstractPlayerWithMinions {
         //retVal.add(SparkingThings.ID);
           //retVal.add(PhoenixTenacity.ID);
 //        retVal.add(DragonsBreath.ID);
-//        retVal.add(ShadowAspect.ID);
+        retVal.add(ShadowAspect.ID);
 //        retVal.add(SmogWave.ID);
 //        retVal.add(Defend.ID);
 //        retVal.add(DrunkenMaster.ID);
@@ -187,7 +187,7 @@ public class Mandarina extends AbstractPlayerWithMinions {
 //        retVal.add(Blur.ID);
 //        retVal.add(FlameAspect.ID);
 //        retVal.add(MidfightFire.ID);
-
+//       retVal.add(DarklingPact.ID);
 //        retVal.add(HotLeafJuice.ID);
 //        retVal.add(KindleSpirit.ID);
 //        retVal.add(PhoenixTenacity.ID);

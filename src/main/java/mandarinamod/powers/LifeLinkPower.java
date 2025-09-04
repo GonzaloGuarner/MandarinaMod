@@ -20,9 +20,7 @@ import mandarinamod.MandarinaMod;
 
 public class LifeLinkPower extends BasePower implements OnPlayerDeathPower, NonStackablePower {
         public static final String POWER_ID = MandarinaMod.makeID(LifeLinkPower.class.getSimpleName());
-    private static final PowerStrings powerStrings;
-    public static final String NAME;
-    public static final String[] DESCRIPTIONS;
+    public static final String NAME =  "Life Link";
     private boolean isPlayerDead = false;
     private boolean isPlayerReviving = false;
 
@@ -85,13 +83,4 @@ public class LifeLinkPower extends BasePower implements OnPlayerDeathPower, NonS
             }
         }
     }
-
-    static {
-            powerStrings = CardCrawlGame.languagePack.getPowerStrings(LifeLinkPower.class.getSimpleName());
-        NAME = powerStrings.NAME;
-        DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    }
-
-
-
 }

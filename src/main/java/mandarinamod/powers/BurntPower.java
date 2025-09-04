@@ -9,7 +9,7 @@ import mandarinamod.MandarinaMod;
 
 public class BurntPower extends BasePower {
     public static final String POWER_ID = MandarinaMod.makeID(BurntPower.class.getSimpleName());
-    private static final String NAME = "Burn";
+    private static final String NAME = "Burnt";
 
     public BurntPower(AbstractCreature owner, int amount) {
         super(POWER_ID, PowerType.DEBUFF, true, owner, amount);
