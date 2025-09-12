@@ -19,8 +19,13 @@ import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import hlysine.friendlymonsters.characters.AbstractPlayerWithMinions;
 import mandarinamod.cards.basic.*;
+import mandarinamod.cards.common.EbbAndFlow;
+import mandarinamod.cards.rare.AuroraRay;
 import mandarinamod.cards.rare.DarklingPact;
 import mandarinamod.cards.rare.ShadowAspect;
+import mandarinamod.cards.rare.Tornado;
+import mandarinamod.cards.uncommon.Fireballs;
+import mandarinamod.cards.uncommon.GoWithTheFlow;
 import mandarinamod.cards.uncommon.OddSmokes;
 import mandarinamod.relics.TheCycleCompass;
 
@@ -55,7 +60,7 @@ public class Mandarina extends AbstractPlayerWithMinions {
 
         //Character select images
         private static final String CHAR_SELECT_BUTTON = characterPath("select/button.png");
-        private static final String CHAR_SELECT_PORTRAIT = characterPath("select/portrait.png");
+        private static final String CHAR_SELECT_PORTRAIT = characterPath("select/portrait4.png");
 
         //Character card images
         private static final String BG_ATTACK = characterPath("cardback/bg_attack.png");
@@ -162,37 +167,39 @@ public class Mandarina extends AbstractPlayerWithMinions {
 //        retVal.add(BlazingGuard.ID);
 //        retVal.add(BlazingGuard.ID);
 //        retVal.add(Tornado.ID);
-//        retVal.add(ReboundKick.ID);
-  //      retVal.add(OddOdds.ID);
+////        retVal.add(ReboundKick.ID);
+//  //      retVal.add(OddOdds.ID);
+////        retVal.add(AuroraRay.ID);
 //        retVal.add(AuroraRay.ID);
-//        retVal.add(AuroraRay.ID);
-//        retVal.add(LightningConduit.ID);
-//        retVal.add(TimelyBoost.ID);
-        retVal.add(OddSmokes.ID);
-//        retVal.add(BlazingGuard.ID);
-//        retVal.add(PushThrough.ID);
-//        retVal.add(ShadowRitual.ID);
+////        retVal.add(LightningConduit.ID);
+////        retVal.add(TimelyBoost.ID);
+////        retVal.add(OddSmokes.ID);
+////        retVal.add(BlazingGuard.ID);
+////        retVal.add(PushThrough.ID);
+////        retVal.add(ShadowRitual.ID);
 //        retVal.add(GoWithTheFlow.ID);
-        //retVal.add(SparkingThings.ID);
-          //retVal.add(PhoenixTenacity.ID);
-//        retVal.add(DragonsBreath.ID);
-        retVal.add(ShadowAspect.ID);
-//        retVal.add(SmogWave.ID);
-//        retVal.add(Defend.ID);
-//        retVal.add(DrunkenMaster.ID);
-
-//        retVal.add(LightningConduit.ID);
-//        retVal.add(AuroraRay.ID);
-//        retVal.add(StaticCharge.ID);
-//        retVal.add(Blur.ID);
-//        retVal.add(FlameAspect.ID);
-//        retVal.add(MidfightFire.ID);
+//        //retVal.add(SparkingThings.ID);
+//          //retVal.add(PhoenixTenacity.ID);
+////        retVal.add(DragonsBreath.ID);
+////        retVal.add(ShadowAspect.ID);
+////        retVal.add(SmogWave.ID);
+////        retVal.add(Defend.ID);
+////        retVal.add(DrunkenMaster.ID);
+//
+////        retVal.add(LightningConduit.ID);
+////        retVal.add(AuroraRay.ID);
+////        retVal.add(StaticCharge.ID);
+////        retVal.add(Blur.ID);
+////        retVal.add(FlameAspect.ID);
+////        retVal.add(MidfightFire.ID);
 //       retVal.add(DarklingPact.ID);
-//        retVal.add(HotLeafJuice.ID);
-//        retVal.add(KindleSpirit.ID);
-//        retVal.add(PhoenixTenacity.ID);
-//        retVal.add(UnbalancingWinds.ID);
+////        retVal.add(HotLeafJuice.ID);
+////        retVal.add(KindleSpirit.ID);
+////        retVal.add(PhoenixTenacity.ID);
+////        retVal.add(UnbalancingWinds.ID);
 //        retVal.add(GoWithTheFlow.ID);
+//        retVal.add(EbbAndFlow.ID);
+//        retVal.add(Fireballs.ID);
 
 
         return retVal;
@@ -225,8 +232,8 @@ public class Mandarina extends AbstractPlayerWithMinions {
     public AbstractGameAction.AttackEffect[] getSpireHeartSlashEffect() {
         //These attack effects will be used when you attack the heart.
         return new AbstractGameAction.AttackEffect[] {
-                AbstractGameAction.AttackEffect.SLASH_VERTICAL,
-                AbstractGameAction.AttackEffect.SLASH_HEAVY,
+                AbstractGameAction.AttackEffect.LIGHTNING,
+                AbstractGameAction.AttackEffect.FIRE,
                 AbstractGameAction.AttackEffect.BLUNT_HEAVY
         };
     }

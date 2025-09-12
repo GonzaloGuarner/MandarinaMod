@@ -35,8 +35,8 @@
       " HP."
     ]
   },
-  "${modID}:StaticChargePower": {
-    "NAME": "Static Charge",
+  "${modID}:StaticPower": {
+    "NAME": "Static",
     "DESCRIPTIONS": [
       "When attacked, deals #b",
       " damage to ALL enemies once.",

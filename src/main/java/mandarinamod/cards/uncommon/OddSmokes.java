@@ -1,6 +1,7 @@
 package mandarinamod.cards.uncommon;
 
 import com.evacipated.cardcrawl.mod.stslib.actions.common.GainCustomBlockAction;
+import com.evacipated.cardcrawl.mod.stslib.blockmods.BlockModContainer;
 import com.evacipated.cardcrawl.mod.stslib.blockmods.BlockModifierManager;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -44,7 +45,6 @@ public class OddSmokes extends BaseCard {
         super(ID, info);
         setBlock(BLOCK, UPGRADE_BLOCK);
         setMagic(SMOKE_BLOCK, SMOKE_BLOCK_UPG);
-        BlockModifierManager.addModifier(this, new CursedBlock());
         tags.add(CustomTags.ODD);
     }
 
@@ -54,18 +54,19 @@ public class OddSmokes extends BaseCard {
 
         // Check if the card is played in an odd position
         if (CardUtils.isOddPosition() || CardUtils.isPerfectPosition()) { // Odd position: 1st, 3rd, 5th, etc.
+            BlockModContainer cursed = new BlockModContainer(this, new CursedBlock());
             // Player and any friendly minions also gain block
-            addToBot(new GainCustomBlockAction(this, AbstractDungeon.player, this.magicNumber));
+            addToBot(new GainCustomBlockAction(cursed, AbstractDungeon.player, this.magicNumber));
 
             if (AbstractDungeon.player instanceof AbstractPlayerWithMinions){
                 MonsterGroup monstersGroup = ((AbstractPlayerWithMinions)AbstractDungeon.player).getMinions();
                 if(!monstersGroup.monsters.isEmpty()){
-                    addToBot(new GainCustomBlockAction(this, monstersGroup.monsters.get(0),  this.magicNumber));
+                    addToBot(new GainCustomBlockAction(cursed, monstersGroup.monsters.get(0),  this.magicNumber));
                 }
             }
 
             AbstractDungeon.getMonsters().monsters.forEach(monster -> {
-                addToBot(new GainCustomBlockAction(this, monster, this.magicNumber)); // Enemies gain block
+                addToBot(new GainCustomBlockAction(cursed, monster, this.magicNumber)); // Enemies gain block
             });
         }
     }

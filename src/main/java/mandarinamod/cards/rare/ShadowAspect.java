@@ -27,7 +27,7 @@ public class ShadowAspect extends BaseCard {
     );
 
     private static final int BLOCK = 2;
-    private static final int UPG_BLOCK = 2;
+    private static final int UPG_BLOCK = 1;
     private static final int MAGIC = 1;
     private static final int UPG_MAGIC = 1;
 
@@ -39,7 +39,7 @@ public class ShadowAspect extends BaseCard {
 
     public ShadowAspect() {
         super(ID, info);
-        setBlock(BLOCK,UPG_BLOCK);
+        setBlock(BLOCK, UPG_BLOCK);
         setMagic(MAGIC, UPG_MAGIC); // Set magic number and upgrade value
         this.rawDescription = DESCRIPTION;
         initializeDescription();
@@ -60,6 +60,7 @@ public class ShadowAspect extends BaseCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            upgradeBlock(UPG_BLOCK);
             upgradeMagicNumber(UPG_MAGIC); // Properly upgrade the magic number
             this.rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();

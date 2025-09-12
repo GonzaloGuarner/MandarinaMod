@@ -44,13 +44,9 @@ public class AuroraRay extends BaseCard {
         if (m == null) {
             return;
         }
-//            this.addToBot(new VFXAction(new WeightyImpactEffect(m.hb.cX, m.hb.cY)));
-//            for (int i = 0; i < 3; i++) { // Adding multiple lightning effects for a dramatic impact
-//                float offsetX = (i - 1) * 10f;
-//                AbstractDungeon.effectList.add(new LightningEffect(m.hb.cX + offsetX, m.hb.cY));
-//
+
         this.addToBot(new VFXAction(new AuroraRayEffect(m.hb.cX, m.hb.cY)));
-        this.baseCost = upgraded ? UPGRADE_COST : UPGRADE_COST+1;
+        this.updateCost(upgraded ? UPGRADE_COST : UPGRADE_COST+1);
 
 
         // Deal massive single-target damage
@@ -70,8 +66,8 @@ public class AuroraRay extends BaseCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPGRADE_DAMAGE); // Upgrade damage from 66 to 75
-            upgradeBaseCost(UPGRADE_COST); // Reduce cost from 6 to 5
+            upgradeDamage(UPGRADE_DAMAGE);
+            upgradeBaseCost(UPGRADE_COST); // Reduce cost from 5 to 4
             initializeDescription();
         }
     }
@@ -79,7 +75,7 @@ public class AuroraRay extends BaseCard {
     @Override
     public void resetAttributes() {
         super.resetAttributes();
-        // Ensure cost doesn't go below 0 after reduction
+        // Cost doesn't go below 0 after reduction
         if (this.cost < 0) {
             this.cost = 0;
         }

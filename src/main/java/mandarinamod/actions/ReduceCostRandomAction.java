@@ -45,13 +45,13 @@ public class ReduceCostRandomAction extends AbstractGameAction {
         AbstractCard c = this.p.hand.getRandomCard(AbstractDungeon.cardRandomRng);
         if (better) {
             if (c.costForTurn > 0) {
-                c.costForTurn = c.costForTurn-1;
+                c.setCostForTurn(c.costForTurn-1);
                 c.superFlash(Color.GOLD.cpy());
             } else {
                 this.findAndModifyCard(better);
             }
         } else if (c.cost > 0) {
-            c.costForTurn = c.cost-1;
+            c.setCostForTurn(c.cost-1);
             c.superFlash(Color.GOLD.cpy());
         }
 
