@@ -29,7 +29,10 @@
   "${modID}:DarkBolt": {
     "NAME": "Dark Bolt",
     "DESCRIPTION": "Unplayable. NL When you draw this card, a random enemy loses !M! HP. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Unplayable. NL When you draw this card, a random enemy loses !M! HP. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Unplayable. NL When you draw this card, a random enemy loses !M! HP. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "I can't play this card."
+    ]
   },
   "${modID}:FuelReserve": {
     "NAME": "Fuel Reserve",

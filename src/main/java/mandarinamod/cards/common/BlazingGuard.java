@@ -32,7 +32,7 @@ public class BlazingGuard extends BaseCard {
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
     private static final int BLOCK = 8;
-    private static final int UPGRADE_BLOCK = 3;
+    private static final int UPGRADE_BLOCK = 2;
     private static final int DRAW_AMOUNT = 1;
     private static final int UPGRADE_DRAW = 0;
 

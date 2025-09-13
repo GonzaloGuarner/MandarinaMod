@@ -10,6 +10,7 @@ import mandarinamod.cards.BaseCard;
 import mandarinamod.character.Mandarina;
 import mandarinamod.util.CardStats;
 import mandarinamod.util.CardUtils;
+import mandarinamod.util.ColorUtils;
 
 public class EvenExchange extends BaseCard {
     public static final String ID = MandarinaMod.makeID(EvenExchange.class.getSimpleName());
@@ -37,7 +38,7 @@ public class EvenExchange extends BaseCard {
         addToBot(new DrawCardAction(player, this.magicNumber));
 
         // Bonus effect: If played in Even position, draw additional card and exhaust
-        if (CardUtils.isEvenPosition()) {
+        if (CardUtils.isEvenPosition() || CardUtils.isPerfectPosition()) {
             addToBot(new DrawCardAction(player, EVEN_BONUS_DRAW));
             addToBot(new ExhaustAction(player, player, EXHAUST_AMOUNT, false));
         }
@@ -46,6 +47,22 @@ public class EvenExchange extends BaseCard {
     @Override
     public AbstractCard makeCopy() {
         return new EvenExchange();
+    }
+
+    @Override
+    public void triggerOnGlowCheck() {
+        super.triggerOnGlowCheck();
+        //Default color
+        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+
+        if (CardUtils.isOddPosition()) {
+            // Set the glow color to magenta if card would be even
+            this.glowColor = ColorUtils.MAGENTA_GLOW.cpy();
+        }
+        if (CardUtils.isPerfectPosition()) {
+            // Set the glow color to gold
+            this.glowColor = ColorUtils.GOLD_GLOW.cpy();
+        }
     }
 }
 

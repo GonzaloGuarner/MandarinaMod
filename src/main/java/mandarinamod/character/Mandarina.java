@@ -27,6 +27,7 @@ import mandarinamod.cards.rare.Tornado;
 import mandarinamod.cards.uncommon.Fireballs;
 import mandarinamod.cards.uncommon.GoWithTheFlow;
 import mandarinamod.cards.uncommon.OddSmokes;
+import mandarinamod.cards.uncommon.ShotInTheDark;
 import mandarinamod.relics.TheCycleCompass;
 
 import java.util.ArrayList;
@@ -149,16 +150,17 @@ public class Mandarina extends AbstractPlayerWithMinions {
         ArrayList<String> retVal = new ArrayList<>();
         //List of IDs of cards for your starting deck.
         //If you want multiple of the same card, you have to add it multiple times.
+        retVal.add(ShotInTheDark.ID);
         retVal.add(Strike.ID);
         retVal.add(Strike.ID);
         retVal.add(Strike.ID);
         retVal.add(Strike.ID);
-        retVal.add(Defend.ID);
-        retVal.add(Defend.ID);
-        retVal.add(Defend.ID);
-        retVal.add(Defend.ID);
-        retVal.add(SwiftJab.ID);
-        retVal.add(Recall.ID);
+//        retVal.add(Defend.ID);
+//        retVal.add(Defend.ID);
+//        retVal.add(Defend.ID);
+//        retVal.add(Defend.ID);
+//        retVal.add(SwiftJab.ID);
+//        retVal.add(Recall.ID);
 //        retVal.add(PastPresentFuture.ID);
 //        retVal.add(PositionalStrike.ID);
 //        retVal.add(PerfectPosition.ID);
