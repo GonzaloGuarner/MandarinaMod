@@ -26,8 +26,9 @@
     ],
     "OPTIONS": [
       "[Withered Apple] #gFully #gheal #gHP, but gain #r2 #Languor.",
-      "[Golden Citrus] Gain #g100 #gGold, but lose a #rrandom card.",
-      "[Forbidden Fruit] Gain 2 Relics. #rLose #r30% #rof #ryour #rHP."
+      "[Golden Citrus] Gain #g100 #gGold, but #rlose a #rrandom card.",
+      "[Forbidden Fruit] Gain 2 Relics. #rLose #r",
+      " #rHP."
     ]
   }
 }

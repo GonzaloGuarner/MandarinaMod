@@ -2,6 +2,7 @@ package mandarinamod.events;
 
 import basemod.abstracts.events.PhasedEvent;
 import basemod.abstracts.events.phases.TextPhase;
+import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -20,9 +21,16 @@ public class TheOrchard extends PhasedEvent {
     public static final String NAME = eventStrings.NAME;
     public static final String[] DESCRIPTIONS = eventStrings.DESCRIPTIONS;
     public static final String[] OPTIONS = eventStrings.OPTIONS;
+    private int damage = 0;
 
     public TheOrchard() {
         super(ID, NAME, "mandarinamod/images/events/TheOrchard.png");
+
+        if (AbstractDungeon.ascensionLevel >= 15) {
+            this.damage = MathUtils.round((float)AbstractDungeon.player.maxHealth * 0.4F);
+        } else {
+            this.damage = MathUtils.round((float)AbstractDungeon.player.maxHealth * 0.3F);
+        }
 
         // Closing Phase: Just shows the second description and a button to leave.
         TextPhase closingPhase = new TextPhase(DESCRIPTIONS[1])
@@ -58,7 +66,7 @@ public class TheOrchard extends PhasedEvent {
                 })
 
                 // [Forbidden Fruit] Gain 2 Relics, lose 30% max HP.
-                .addOption(OPTIONS[2], (i) -> {
+                .addOption(OPTIONS[2]+damage+OPTIONS[3], (i) -> {
                     AbstractRelic relic1 = AbstractDungeon.returnRandomRelic(AbstractRelic.RelicTier.COMMON);
                     AbstractRelic.RelicTier[] possibleTiers = {
                             AbstractRelic.RelicTier.COMMON,
