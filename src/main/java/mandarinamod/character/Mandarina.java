@@ -19,15 +19,9 @@ import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import hlysine.friendlymonsters.characters.AbstractPlayerWithMinions;
 import mandarinamod.cards.basic.*;
-import mandarinamod.cards.common.EbbAndFlow;
-import mandarinamod.cards.rare.AuroraRay;
-import mandarinamod.cards.rare.DarklingPact;
-import mandarinamod.cards.rare.ShadowAspect;
-import mandarinamod.cards.rare.Tornado;
-import mandarinamod.cards.uncommon.Fireballs;
-import mandarinamod.cards.uncommon.GoWithTheFlow;
-import mandarinamod.cards.uncommon.OddSmokes;
-import mandarinamod.cards.uncommon.ShotInTheDark;
+import mandarinamod.cards.common.*;
+import mandarinamod.cards.rare.*;
+import mandarinamod.cards.uncommon.*;
 import mandarinamod.relics.TheCycleCompass;
 
 import java.util.ArrayList;
@@ -161,48 +155,7 @@ public class Mandarina extends AbstractPlayerWithMinions {
         retVal.add(Defend.ID);
         retVal.add(SwiftJab.ID);
         retVal.add(Recall.ID);
-//        retVal.add(PastPresentFuture.ID);
-//        retVal.add(PositionalStrike.ID);
-//        retVal.add(PerfectPosition.ID);
-//        retVal.add(BlazingGuard.ID);
-//        retVal.add(BlazingGuard.ID);
-//        retVal.add(BlazingGuard.ID);
-//        retVal.add(BlazingGuard.ID);
-//        retVal.add(Tornado.ID);
-////        retVal.add(ReboundKick.ID);
-//  //      retVal.add(OddOdds.ID);
-////        retVal.add(AuroraRay.ID);
-//        retVal.add(AuroraRay.ID);
-////        retVal.add(LightningConduit.ID);
-////        retVal.add(TimelyBoost.ID);
-////        retVal.add(OddSmokes.ID);
-////        retVal.add(BlazingGuard.ID);
-////        retVal.add(PushThrough.ID);
-////        retVal.add(ShadowRitual.ID);
-//        retVal.add(GoWithTheFlow.ID);
-//        //retVal.add(SparkingThings.ID);
-//          //retVal.add(PhoenixTenacity.ID);
-////        retVal.add(DragonsBreath.ID);
-////        retVal.add(ShadowAspect.ID);
-////        retVal.add(SmogWave.ID);
-////        retVal.add(Defend.ID);
-////        retVal.add(DrunkenMaster.ID);
-//
-////        retVal.add(LightningConduit.ID);
-////        retVal.add(AuroraRay.ID);
-////        retVal.add(StaticCharge.ID);
-////        retVal.add(Blur.ID);
-////        retVal.add(FlameAspect.ID);
-////        retVal.add(MidfightFire.ID);
-//       retVal.add(DarklingPact.ID);
-////        retVal.add(HotLeafJuice.ID);
-////        retVal.add(KindleSpirit.ID);
-////        retVal.add(PhoenixTenacity.ID);
-////        retVal.add(UnbalancingWinds.ID);
-//        retVal.add(GoWithTheFlow.ID);
-//        retVal.add(EbbAndFlow.ID);
-//        retVal.add(Fireballs.ID);
-
+        retVal.add(StaticCharge.ID);
 
         return retVal;
     }

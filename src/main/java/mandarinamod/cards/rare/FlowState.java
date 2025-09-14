@@ -95,31 +95,15 @@ public class FlowState extends BaseCard implements BranchingUpgradesCard {
 
     public void baseUpgrade() {
         // Upgrade the damage
-        if (this.damage == BASE_DAMAGE) {
-            upgradeDamage(DAMAGE_UPGRADE_1); // First damage upgrade
-            int upgrades = this.magicNumber == BASE_FLOW_GAIN?1:2;
-            this.name = cardStrings.NAME + "+" + upgrades;
-            initializeDescription();
-        } else if(this.damage == BASE_DAMAGE+DAMAGE_UPGRADE_1){
-            upgradeDamage(DAMAGE_UPGRADE_2); // Second damage upgrade
-            this.name = cardStrings.NAME + "+" + 2;
-            initializeDescription();
-        }
+        upgradeDamage(DAMAGE_UPGRADE_1); // First damage upgrade
+        initializeDescription();
     }
 
     public void branchUpgrade() {
         // Upgrade the flow gain
         this.rawDescription = UPGRADE_DESCRIPTION;
-        if (this.magicNumber == BASE_FLOW_GAIN) {
-            upgradeMagicNumber(FLOW_UPGRADE_1); // First flow upgrade
-            int upgrades = this.damage == BASE_DAMAGE?1:2;
-            this.name = cardStrings.NAME + "+" + upgrades;
-            initializeDescription();
-        } else if(this.magicNumber == BASE_FLOW_GAIN+FLOW_UPGRADE_1){
-            upgradeMagicNumber(FLOW_UPGRADE_2); // Second flow upgrade
-            this.name = cardStrings.NAME + "+" + 2;
-            initializeDescription();
-        }
+        upgradeMagicNumber(FLOW_UPGRADE_1); // First flow upgrade
+        initializeDescription();
     }
 
 //    @Override

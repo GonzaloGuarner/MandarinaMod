@@ -19,12 +19,10 @@ public class FlowStatePower extends BasePower implements OnReceivePowerPower {
     public static final String POWER_ID = MandarinaMod.makeID(FlowStatePower.class.getSimpleName());
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 
-    private int damageOnFlowGain;
-    private int flowGain;
 
     public FlowStatePower(AbstractCreature owner, int damageOnFlowGain) {
         super(POWER_ID, PowerType.BUFF, false, owner, damageOnFlowGain);
-        this.damageOnFlowGain = damageOnFlowGain;
+        this.amount = damageOnFlowGain;
         this.updateDescription();
     }
 
@@ -44,15 +42,13 @@ public class FlowStatePower extends BasePower implements OnReceivePowerPower {
         // Deal damage to a random enemy
         AbstractMonster m = AbstractDungeon.getMonsters().getRandomMonster(true);
         if (m != null) {
-            addToBot(new DamageAction(m, new DamageInfo(owner, damageOnFlowGain, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL, true));
-
+            addToBot(new DamageAction(m, new DamageInfo(owner, amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL, true));
         }
     }
 
     @Override
     public void updateDescription() {
-        description = String.format(powerStrings.DESCRIPTIONS[0], damageOnFlowGain, flowGain);
+        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
-
 
 }

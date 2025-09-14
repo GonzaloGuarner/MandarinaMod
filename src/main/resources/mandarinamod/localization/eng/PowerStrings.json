@@ -21,6 +21,13 @@
       " #yFlow. NL Draw 1 extra card next turn."
     ]
   },
+  "${modID}:FlowStatePower": {
+    "NAME": "Flow State",
+    "DESCRIPTIONS": [
+      "Whenever you gain or lose #yFlow, deal #b",
+      " damage to a random enemy."
+    ]
+  },
   "${modID}:FlightPower": {
     "NAME": "Flight",
     "DESCRIPTIONS": [

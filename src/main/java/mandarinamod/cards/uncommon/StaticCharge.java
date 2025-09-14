@@ -1,5 +1,6 @@
 package mandarinamod.cards.uncommon;
 
+import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.BranchingUpgradesCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -13,7 +14,7 @@ import mandarinamod.character.Mandarina;
 import mandarinamod.powers.StaticPower;
 import mandarinamod.util.CardStats;
 
-public class StaticCharge extends BaseCard {
+public class StaticCharge extends BaseCard implements BranchingUpgradesCard {
     public static final String ID = MandarinaMod.makeID(StaticCharge.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
@@ -31,14 +32,14 @@ public class StaticCharge extends BaseCard {
     );
 
     private static final int BLOCK = 6;                  // Amount of Block gained
-    private static final int UPGRADE_PLUS_BLOCK = 0;     // Upgrade: Additional block
-    private static final int THORNS_DAMAGE = 7;          // Damage dealt when attacked
-    private static final int UPGRADE_PLUS_THORNS_DAMAGE = 5; // Upgrade: Additional damage when upgraded
+    private static final int UPGRADE_PLUS_BLOCK = 4;     // Upgrade: Additional block
+    private static final int THORNS_DAMAGE = 6;          // Damage dealt when attacked
+    private static final int UPGRADE_STATIC_DAMAGE = 4; // Upgrade: Additional damage when upgraded
 
     public StaticCharge() {
         super(ID, info);
         setBlock(BLOCK, UPGRADE_PLUS_BLOCK);
-        setMagic(THORNS_DAMAGE, UPGRADE_PLUS_THORNS_DAMAGE);
+        setMagic(THORNS_DAMAGE, UPGRADE_STATIC_DAMAGE);
         initializeDescription();
     }
 
@@ -56,14 +57,26 @@ public class StaticCharge extends BaseCard {
         return new StaticCharge();
     }
 
+
+    public void baseUpgrade() {
+        upgradeBlock(UPGRADE_PLUS_BLOCK);
+        this.rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
+    }
+    public void branchUpgrade() {
+        upgradeMagicNumber(UPGRADE_STATIC_DAMAGE);
+        this.rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
+    }
     @Override
     public void upgrade() {
-        if (!upgraded) {
+        if (!this.upgraded) {
             upgradeName();
-            upgradeBlock(UPGRADE_PLUS_BLOCK);           // Upgrade block amount
-            upgradeMagicNumber(UPGRADE_PLUS_THORNS_DAMAGE); // Upgrade counter damage amount
-            this.rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
+            if (isBranchUpgrade()) {
+                branchUpgrade();
+            } else {
+                baseUpgrade();
+            }
         }
     }
 }

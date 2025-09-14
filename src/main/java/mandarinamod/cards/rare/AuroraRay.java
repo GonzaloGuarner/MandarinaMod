@@ -66,7 +66,7 @@ public class AuroraRay extends BaseCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPGRADE_DAMAGE);
+            //upgradeDamage(UPGRADE_DAMAGE);
             upgradeBaseCost(UPGRADE_COST); // Reduce cost from 5 to 4
             initializeDescription();
         }

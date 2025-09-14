@@ -152,7 +152,7 @@
     "DESCRIPTION": "Apply !M! ${modID}:Pressure. All enemies lose HP equal to twice their ${modID}:Pressure. NL Remove all ${modID}:Pressure from the target.",
     "UPGRADE_DESCRIPTION": "Apply !M! ${modID}:Pressure. All enemies lose HP equal to twice their ${modID}:Pressure. NL Remove all ${modID}:Pressure from the target."
   },
-"${modID}:EssenceBarrier": {
+  "${modID}:EssenceBarrier": {
     "NAME": "Essence Barrier",
     "DESCRIPTION": "Gain !B! Block. NL If you have an Elemental Aspect, gain !${modID}:elementalBlock! additional Block."
   },
@@ -309,8 +309,8 @@
   },
   "${modID}:FlameAspect": {
     "NAME": "Flame Aspect",
-    "DESCRIPTION": "When playing an attack, increase its damage this combat and add !M! to the next attack's bonus this turn.",
-    "UPGRADE_DESCRIPTION": "When playing an attack, increase its damage this combat and add !M! to the next attack's bonus this turn."
+    "DESCRIPTION": "When playing an Attack, increase its damage this combat by how many Attacks you’ve played this turn.",
+    "UPGRADE_DESCRIPTION": "When playing an Attack, increase its damage this combat by how many Attacks+!M! you’ve played this turn."
   },
   "${modID}:ShadowAspect": {
   "NAME": "Shadow Aspect",

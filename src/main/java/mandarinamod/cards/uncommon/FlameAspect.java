@@ -32,7 +32,7 @@ public class FlameAspect extends BaseCard {
 
     public FlameAspect() {
         super(ID, info);
-        setMagic(INCREMENT_STEP);
+        setMagic(INCREMENT_STEP, 0);
         this.rawDescription = cardStrings.DESCRIPTION;
         initializeDescription();
     }
@@ -66,6 +66,7 @@ public class FlameAspect extends BaseCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            upgradeMagicNumber(0);
             // No change to magicNumber (increment step remains the same)
             this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
             initializeDescription();

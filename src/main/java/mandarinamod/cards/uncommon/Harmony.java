@@ -109,7 +109,7 @@ public class Harmony extends BaseCard implements BranchingUpgradesCard {
 
     public void branchUpgrade() {
         // Upgrade 2: Costs 2, significantly boosts values
-        this.cost = this.costForTurn = 2;
+        this.cost = this.costForTurn = 1;
         upgradeMagicNumber(FLOW_UPGRADE_2);
         staticChargeAmount+=STATIC_CHARGE_UPGRADE_2;
         sparkAmount+=SPARKS_UPGRADE_2;
