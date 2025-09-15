@@ -1,0 +1,102 @@
+[
+  {
+    "PROPER_NAME": "This is displayed in the tooltip.",
+    "NAMES": [
+      "这些",
+      "是",
+      "在",
+      "文本",
+      "中",
+      "检测到的"
+    ],
+    "DESCRIPTION": "这将在提示框中显示。NAMES 中不应包含空格，除了多词关键词（见下一个条目）。"
+  },
+  {
+    "PROPER_NAME": "Multiword Keyword",
+    "NAMES": [
+      "多词关键词",
+      "多词_关键词",
+      "多词_关键词们"
+    ],
+    "DESCRIPTION": "确保 NAMES 中第一个元素没有下划线。其余的应使用 _ 来替代空格。在卡牌文本中，你将使用带下划线的版本。"
+  },
+  {
+    "PROPER_NAME": "Flow",
+    "NAMES": [
+      "流动",
+      "flow"
+    ],
+    "DESCRIPTION": "在你回合开始时，如果你至少有 3 层流动，则额外抓 1 张牌，并失去 1 层流动。"
+  },
+  {
+    "PROPER_NAME": "Flight",
+    "NAMES": [
+      "飞行",
+      "flight"
+    ],
+    "DESCRIPTION": "受到攻击时只承受 50% 的伤害并消耗 1 层飞行。当失去所有层数时，陷入缠绕。"
+  },
+  {
+    "PROPER_NAME": "Choke",
+    "NAMES": [
+      "窒息",
+      "choke"
+    ],
+    "DESCRIPTION": "在本回合中，每当你打出一张牌，目标敌人失去生命。"
+  },
+  {
+    "PROPER_NAME": "Void Form",
+    "NAMES": [
+      "虚空形态",
+      "虚空_形态"
+    ],
+    "DESCRIPTION": "拥抱虚空，造成强大的伤害并变为虚无。"
+  },
+  {
+    "PROPER_NAME": "Static",
+    "NAMES": [
+      "静电"
+    ],
+    "DESCRIPTION": "下次你被攻击时，反击造成伤害。如果你拥有雷霆化身，则改为打击所有敌人。"
+  },
+  {
+    "PROPER_NAME": "Burnt",
+    "NAMES": [
+      "灼烧",
+      "burnt"
+    ],
+    "DESCRIPTION": "灼烧的生物在回合结束时失去生命。每回合灼烧减半。"
+  },
+  {
+    "PROPER_NAME": "Pressure",
+    "NAMES": [
+      "压力",
+      "pressure"
+    ],
+    "DESCRIPTION": "每当压力触发时，生物失去生命。"
+  },
+  {
+    "PROPER_NAME": "Odd",
+    "NAMES": [
+      "奇数",
+      "odd"
+    ],
+    "DESCRIPTION": "在本回合作为第 1、3、5……张牌打出时触发。"
+  },
+  {
+    "PROPER_NAME": "Even",
+    "NAMES": [
+      "偶数",
+      "even"
+    ],
+    "DESCRIPTION": "在本回合作为第 2、4、6……张牌打出时触发。"
+  },
+  {
+    "PROPER_NAME": "Third",
+    "NAMES": [
+      "第三张",
+      "third"
+    ],
+    "DESCRIPTION": "在本回合作为第 3 张牌打出时触发。"
+  }
+]

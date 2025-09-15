@@ -1,0 +1,34 @@
+{
+  "${modID}:EventID": {
+    "NAME": "Event Name",
+    "DESCRIPTIONS": [
+      "This is event text, generally used to describe what's happening.",
+      "#g~This~ #g~text~ #g~is~ #g~green~ #g~and~ #g~wavy.~",
+      "#r@RED@ #r@AND@ #r@VIBRATING@ #r@TEXT.@",
+      "#rRed #gGreen #yYellow #bBlue #pPurple. ~Wavy~ @vibrating.@",
+      "You have to mark every word individually.",
+      "You can also use [#ffffff]white[] hex color codes like this to color text.",
+      "Hex color codes also work in card text! But not on keywords, without some workarounds."
+    ],
+    "OPTIONS": [
+      "[Action Description] What you actually get.",
+      "[Denial] #rLose #r1 #rMax #rHP. Bad stuff is red.",
+      "[Acceptance] #gGain #gApotheosis. Good stuff is green.",
+      "[Leave]",
+      "Select card to remove. (You can also stick extra text like this in here.)"
+    ]
+  },
+  "${modID}:TheOrchard": {
+    "NAME": "果园",
+    "DESCRIPTIONS": [
+      "你发现自己置身于一个郁郁葱葱、生机勃勃的果园，里面长满了各种大小和颜色的果实。空气中弥漫着成熟果实的芳香，一股神秘的能量从树林中散发出来。一个空灵的声音在低语，催促你做出选择。",
+      "在你做出选择后，你感受到效果在身体中回荡。随着魔力的消散，果园似乎逐渐暗淡下来。在继续旅程之前，你花了一点时间欣赏这片神秘的树林。"
+    ],
+    "OPTIONS": [
+      "[枯萎的苹果] #g完全 #g恢复 #g生命，但获得 #r2 #Languor。",
+      "[黄金柑橘] 获得 #g100 #g金币，但 #r失去一张 #r随机牌。",
+      "[禁忌之果] 获得 2 个遗物。 #r失去 #r",
+      " #rHP。"
+    ]
+  }
+}

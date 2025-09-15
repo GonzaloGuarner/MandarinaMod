@@ -1,0 +1,10 @@
+{
+  "${modID}:DarklingMinion": {
+    "MOVES": [
+      "Chau! Chau!"
+    ],
+    "NAME": "暗影生物",
+    "DIALOG": [
+      "正在再生..."
+    ]
+}

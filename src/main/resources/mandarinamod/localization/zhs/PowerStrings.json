@@ -1,0 +1,143 @@
+{
+"${modID}:InnerFocusPower": {
+"NAME": "内在专注",
+"DESCRIPTIONS": [
+"在你的回合结束时，如果你没有 #y格挡，下回合抽 #b",
+" 张牌。",
+" 张牌。"
+]
+},
+"${modID}:FlowPower": {
+"NAME": "流",
+"DESCRIPTIONS": [
+"你有 #b",
+" #y流。",
+" #y流。 NL 下回合抽 1 张额外的牌。"
+]
+},
+"${modID}:FlowStatePower": {
+"NAME": "流动状态",
+"DESCRIPTIONS": [
+"每当你获得或失去 #y流，对随机敌人造成 #b",
+" 点伤害。"
+]
+},
+"${modID}:FlightPower": {
+"NAME": "飞行",
+"DESCRIPTIONS": [
+"受到的攻击伤害减少 50%。如果本回合造成 #b",
+" 次攻击伤害则取消效果。"
+]
+},
+"${modID}:PressurePower": {
+"NAME": "压力",
+"DESCRIPTIONS": [
+"每当 #y压力 触发，失去 #b",
+" 点生命。"
+]
+},
+"${modID}:StaticPower": {
+"NAME": "静电",
+"DESCRIPTIONS": [
+"被攻击时，对所有敌人造成 #b",
+" 点伤害一次。",
+" 反弹一次伤害。"
+]
+},
+"${modID}:ElectricPotentialPower": {
+"NAME": "电势",
+"DESCRIPTIONS": [
+"每当你失去生命，获得 #b",
+" #y静电 #y充能。"
+]
+},
+"${modID}:ThunderClapped": {
+"NAME": "雷击",
+"DESCRIPTIONS": [
+"每当你攻击该敌人时，对所有敌人造成 #b",
+" 点伤害。"
+]
+},
+"${modID}:KindleSpiritPower": {
+"NAME": "点燃之灵",
+"DESCRIPTIONS": [
+"在你的回合开始时，将一个 #y火花 加入手牌。"
+]
+},
+"${modID}:PhoenixTenacityPower": {
+"NAME": "凤凰坚韧",
+"DESCRIPTIONS": [
+"每当你抽取或 #y消耗 一张 #y状态 卡牌时，对最左边的敌人施加 #b",
+" 点 #y灼烧。 NL 如果你抽到 #y燃烧，将其立即消耗。"
+]
+},
+"${modID}:IgnitePower": {
+"NAME": "点燃",
+"DESCRIPTIONS": [
+"每当你造成未被阻挡的攻击伤害时，对目标施加 #b",
+" 点 #y灼烧。"
+]
+},
+"${modID}:BurntPower": {
+"NAME": "灼烧",
+"DESCRIPTIONS": [
+"在其回合开始时，失去 #b",
+" 点生命。然后，#y灼烧 堆叠减少一半。"
+]
+},
+"${modID}:GustAspectPower": {
+"NAME": "微风面相",
+"DESCRIPTIONS": [
+"在你的回合结束时，获得 #b",
+" #y流。"
+]
+},
+"${modID}:ThunderAspectPower": {
+"NAME": "雷霆面相",
+"DESCRIPTIONS": [
+"在你的回合结束时，对所有敌人造成 #b",
+" 点伤害。"
+]
+},
+"${modID}:FlameAspectPower": {
+"NAME": "火焰面相",
+"DESCRIPTIONS": [
+"下一次攻击获得 #b 点伤害。随后每次攻击获得 #b 点额外伤害。回合结束时重置。"
+]
+},
+"${modID}:ShadowAspectPower": {
+"NAME": "暗影面相",
+"DESCRIPTIONS": [
+"在你的回合开始时，所有人获得 #b",
+" #y格挡。 NL 在回合结束时，偷取",
+" 一半的所有人的 #y格挡。",
+" 所有人的 #y格挡。"
+]
+},
+"${modID}:VoidStalkerPower": {
+"NAME": "虚空潜行者",
+"DESCRIPTIONS": [
+"在 ",
+" 回合后进入 #r虚空 #r形态。",
+" 回合后进入 #r虚空 #r形态。"
+]
+},
+"${modID}:VoidFormPower": {
+"NAME": "虚空形态",
+"DESCRIPTIONS": [
+"伤害增加。如果受到 #y暗影 #y面相 影响，造成双倍伤害。"
+]
+},
+"${modID}:PerfectPositionPower": {
+"NAME": "完美位置",
+"DESCRIPTIONS": [
+"本回合，所有 #y奇数、#y偶数、#y第三 效果在使用时始终触发。"
+]
+},
+"${modID}:LifeLinkPower": {
+"NAME": "生命连结",
+"DESCRIPTIONS": [
+"如果另一名连接的伙伴仍然存活，将在 #b2 回合后以 #b10 HP 复活。"
+]
+}
+}

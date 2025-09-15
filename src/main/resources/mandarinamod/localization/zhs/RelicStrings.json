@@ -1,0 +1,21 @@
+{
+  "${modID}:RelicID": {
+    "NAME": "Good Relic",
+    "FLAVOR": "The Cycle never really ends...",
+    "DESCRIPTIONS": [
+      "At the start of your turn ",
+      "At the start of your turn "
+    ]
+  },
+  "${modID}:TheCycleCompass": {
+    "NAME": "循环指南针",
+    "FLAVOR": "易变元素不断循环，赋予自然力量的恩赐。",
+    "DESCRIPTIONS": [
+      "在每场战斗开始时，获得当前的奖励：  ",
+      " NL #y疾风: 抽取 #b1 张牌。 ",
+      " NL #y雷霆: 获得 #b7 金币。",
+      " NL #y烈焰: 随机一张手牌的费用减少 #b1。",
+      " NL #y暗影: 回复 #b2 生命并获得 #b2 咒诅护甲。"
+    ]
+  }
+}

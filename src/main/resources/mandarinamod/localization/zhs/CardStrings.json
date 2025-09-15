@@ -1,0 +1,424 @@
+{
+  "${modID}:ExampleCard": {
+    "NAME": "示例卡牌",
+    "DESCRIPTION": "描述。",
+    "UPGRADE_DESCRIPTION": "如果卡牌已升级，则会自动使用此描述。如不需要，请删除。",
+    "EXTENDED_DESCRIPTION": [
+      "你可以在这里放更多文字。",
+      "如果你需要用到它。",
+      "暴雪是一个很好的例子。"
+    ]
+  },
+  "${modID}:Strike": {
+    "NAME": "打击",
+    "DESCRIPTION": "造成 !D! 点伤害。"
+  },
+  "${modID}:Defend": {
+    "NAME": "防御",
+    "DESCRIPTION": "获得 !B! 格挡。"
+  },
+  "${modID}:Recall": {
+    "NAME": "回忆",
+    "DESCRIPTION": "获得 !B! 格挡。NL ${modID}:Odd: 将一张弃牌堆中的卡牌置于抽牌堆顶。"
+  },
+  "${modID}:Spark": {
+    "NAME": "火花",
+    "DESCRIPTION": "对一个随机敌人造成 !D! 点伤害。NL 消耗。",
+    "UPGRADE_DESCRIPTION": "对一个随机敌人造成 !D! 点伤害。NL 消耗。"
+  },
+  "${modID}:DarkBolt": {
+    "NAME": "暗影箭",
+    "DESCRIPTION": "无法使用。NL 当你抓到此牌时，随机敌人失去 !M! 点生命。NL 消耗。",
+    "UPGRADE_DESCRIPTION": "无法使用。NL 当你抓到此牌时，随机敌人失去 !M! 点生命。NL 消耗。",
+    "EXTENDED_DESCRIPTION": [
+      "我不能打出这张牌。"
+    ]
+  },
+  "${modID}:FuelReserve": {
+    "NAME": "燃料储备",
+    "DESCRIPTION": "FOK 获得 !M! [E]。NL 将一张 闪耀之物+ 加入你的牌组。NL 短暂。",
+    "UPGRADE_DESCRIPTION": "FOK+ 获得 !M! [E]。NL 将一张 闪耀之物+2 加入你的牌组。NL 短暂。"
+  },
+  "${modID}:SparkingThings": {
+    "NAME": "闪耀之物",
+    "DESCRIPTION": "FOK 将 !M! 张 *火花 加入你的手牌。NL 将一张 *燃料储备 加入你的牌组。NL 短暂。",
+    "UPGRADE_DESCRIPTION": "FOK+ 将 !M! 张 *火花 加入你的手牌。NL 将一张 *燃料储备+ 加入你的牌组。NL 短暂。"
+  },
+  "${modID}:DoubleStrike": {
+    "NAME": "双重打击",
+    "DESCRIPTION": "造成 !D! 点伤害两次。"
+  },
+  "${modID}:SwiftJab": {
+    "NAME": "迅捷突刺",
+    "DESCRIPTION": "造成 !D! 点伤害。NL ${modID}:Even: 弃一张牌。NL 抓一张牌。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。NL ${modID}:Even: 抓一张牌。NL 弃一张牌。"
+  },
+  "${modID}:ShiftingCurrents": {
+    "NAME": "流转水势",
+    "DESCRIPTION": "造成 !D! 点伤害。NL 如果你至少拥有 2 点 ${modID}:Flow，则消耗它并改为造成双倍伤害。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。NL 如果你至少拥有 2 点 ${modID}:Flow，则消耗它并改为对所有敌人造成双倍伤害。"
+  },
+  "${modID}:GustPunch": {
+    "NAME": "疾风拳",
+    "DESCRIPTION": "造成 !D! 点伤害。NL 施加 !M! 虚弱。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。NL 施加 !M! 虚弱。NL 获得 1 点 ${modID}:Flow。"
+  },
+  "${modID}:ShadowPunch": {
+    "NAME": "暗影拳",
+    "DESCRIPTION": "造成 !D! 点伤害。NL 施加 !M! 易伤。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。NL 施加 !M! 易伤。"
+  },
+  "${modID}:SmogBall": {
+    "NAME": "烟雾球",
+    "DESCRIPTION": "目标获得 !B! 点 *诅咒 *格挡。NL 造成 !D! 点伤害。",
+    "UPGRADE_DESCRIPTION": "目标获得 !B! 点 *诅咒 *格挡。NL 造成 !D! 点伤害。"
+  },
+  "${modID}:GetSomeShade": {
+    "NAME": "纳凉",
+    "DESCRIPTION": "获得 !B! 格挡。本场战斗中本牌的格挡提高 !M!。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 格挡。本场战斗中本牌的格挡提高 !M!。"
+  },
+  "${modID}:CracklingArc": {
+    "NAME": "噼啪电弧",
+    "DESCRIPTION": "造成 !D! 点伤害。NL 如果击杀一名敌人，则对附近的敌人重复此效果。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。NL 如果击杀一名敌人，则对附近的敌人重复此效果。"
+  },
+  "${modID}:ElectrifyingBarrier": {
+    "NAME": "电光屏障",
+    "DESCRIPTION": "获得 !B! 格挡。NL 获得 1 个 *火花。NL 下回合，每格挡 !M! 点伤害，获得 1 个 *火花。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 格挡。NL 获得 1 个 *火花。NL 下回合，每格挡 !M! 点伤害，获得 1 个 *火花。"
+  },
+  "${modID}:ConserveSpark": {
+    "NAME": "节能火花",
+    "DESCRIPTION": "保留。NL 获得 !B! 格挡。NL 本回合未使用的能量会被保留。",
+    "UPGRADE_DESCRIPTION": "保留。NL 获得 !B! 格挡。NL 本回合未使用的能量会被保留。"
+  },
+  "${modID}:EbbAndFlow": {
+    "NAME": "潮起潮落",
+    "DESCRIPTION": "获得 !B! 格挡。NL 获得 !M! ${modID}:Flow。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 格挡。NL 获得 !M! ${modID}:Flow。"
+  },
+  "${modID}:HotLeafJuice": {
+    "NAME": "热叶汁",
+    "DESCRIPTION": "获得 !M! [E]。NL 将 1 张灼伤加入你的抽牌堆。",
+    "UPGRADE_DESCRIPTION": "获得 !M! [E]。NL 将 1 张灼伤加入你的抽牌堆。"
+  },
+  "${modID}:MidfightFire": {
+    "NAME": "战中篝火",
+    "DESCRIPTION": "获得 !B! 格挡。NL 将 !M! 张 *火花 加入你的手牌。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 格挡。NL 将 !M! 张 *火花 加入你的手牌。"
+  },
+  "${modID}:ElementalStrike": {
+    "NAME": "元素打击",
+    "DESCRIPTION": "造成 !D! 点伤害。如果敌人有减益，施加 !M! 易伤和 !M! 虚弱。"
+  },
+  "${modID}:ReboundKick": {
+    "NAME": "回旋踢",
+    "DESCRIPTION": "造成 !D! 点伤害。NL 将此牌返回手牌。NL 费用为 1。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。NL 将此牌返回手牌。NL 费用为 1。"
+  },
+  "${modID}:EvenExchange": {
+    "NAME": "公平交换",
+    "DESCRIPTION": "抓 !M! 张牌。NL ${modID}:Even: 抓 1 张牌。NL 消耗 1 张牌。",
+    "UPGRADE_DESCRIPTION": "抓 !M! 张牌。NL ${modID}:Even: 抓 1 张牌。NL 消耗 1 张牌。"
+  },
+  "${modID}:PushThrough": {
+    "NAME": "强行突破",
+    "DESCRIPTION": "造成 !D! 点伤害。NL 如果敌人有格挡，则回响打出此牌。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。NL 如果敌人有格挡，则回响打出此牌。"
+  },
+  "${modID}:UmbralChains": {
+    "NAME": "暗影锁链",
+    "DESCRIPTION": "造成 !D! 点伤害。敌人本回合失去 !M! 点力量。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。敌人本回合失去 !M! 点力量。"
+  },
+  "${modID}:Wildfire": {
+    "NAME": "野火",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。NL 将一张灼伤置于抽牌堆顶。",
+    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害。NL 将一张灼伤置于抽牌堆顶。"
+  },
+  "${modID}:PressurePoint": {
+    "NAME": "压力点",
+    "DESCRIPTION": "施加 !M! ${modID}:Pressure。NL 所有敌人失去等同于其 ${modID}:Pressure 的生命。"
+  },
+  "${modID}:FivePointStrike": {
+    "NAME": "五点打击",
+    "DESCRIPTION": "造成 !D! 点伤害。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。施加 !M! ${modID}:Pressure。敌人失去等同于其 ${modID}:Pressure 的生命。"
+  },
+  "${modID}:PressureRelief": {
+    "NAME": "压力释放",
+    "DESCRIPTION": "施加 !M! ${modID}:Pressure。所有敌人失去等同于其 ${modID}:Pressure 的两倍生命。NL 移除目标所有 ${modID}:Pressure。",
+    "UPGRADE_DESCRIPTION": "施加 !M! ${modID}:Pressure。所有敌人失去等同于其 ${modID}:Pressure 的两倍生命。NL 移除目标所有 ${modID}:Pressure。"
+  },
+  "${modID}:EssenceBarrier": {
+    "NAME": "本源屏障",
+    "DESCRIPTION": "获得 !B! 格挡。NL 如果你拥有元素相位，额外获得 !${modID}:elementalBlock! 格挡。"
+  },
+  "${modID}:Hunger": {
+    "NAME": "饥渴",
+    "DESCRIPTION": "造成 !D! 点伤害。NL ${modID}:Odd: 抓 2 张牌。NL ${modID}:Even: 下回合额外抓 2 张牌。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。NL ${modID}:Odd: 抓 2 张牌。NL ${modID}:Even: 下回合额外抓 2 张牌。"
+  },
+  "${modID}:OddOdds": {
+    "NAME": "奇数赌注",
+    "DESCRIPTION": "猜测抽牌堆顶的卡牌类型。NL 如果你猜对了：NL ${modID}:Odd: 抓 3 张牌。NL ${modID}:Even: 获得 [E] [E] [E]。NL 消耗。",
+    "UPGRADE_DESCRIPTION": "猜测抽牌堆顶的卡牌类型。NL 如果你猜对了：NL ${modID}:Odd: 抓 3 张牌。NL ${modID}:Even: 获得 [E] [E] [E]。NL 消耗。"
+  },
+  "${modID}:AttackGuessChoice": {
+    "NAME": "攻击",
+    "DESCRIPTION": "你的抽牌堆顶是一张攻击牌。"
+  },
+  "${modID}:SkillGuessChoice": {
+    "NAME": "技能",
+    "DESCRIPTION": "你的抽牌堆顶是一张技能牌。"
+  },
+  "${modID}:NeitherGuessChoice": {
+    "NAME": "既不是",
+    "DESCRIPTION": "你的抽牌堆顶既不是攻击牌也不是技能牌。"
+  },
+  "${modID}:InnerFocus": {
+    "NAME": "内心专注",
+    "DESCRIPTION": "如果你在回合结束时没有格挡，下回合开始时抓 !M! 张牌。",
+    "UPGRADE_DESCRIPTION": "如果你在回合结束时没有格挡，下回合开始时抓 !M! 张牌。"
+  },
+  "${modID}:BurdenCycle": {
+    "NAME": "负担循环",
+    "DESCRIPTION": "${modID}:Odd: 为左边的敌人身上的每个减益效果获得 [E]。NL ${modID}:Even: 移除你身上的一个减益效果。",
+    "UPGRADE_DESCRIPTION": "${modID}:Odd: 为左边的敌人身上的每个减益效果获得 [E]。NL ${modID}:Even: 移除你身上的一个减益效果。"
+  },
+  "${modID}:SparkJab": {
+    "NAME": "火花突刺",
+    "DESCRIPTION": "造成 !D! 点伤害。NL ${modID}:Odd: 抓 1 张牌。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。NL ${modID}:Odd: 抓 1 张牌。"
+  },
+  "${modID}:Fireballs": {
+    "NAME": "火球术",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 !M! 次。"
+  },
+  "${modID}:Erupt": {
+    "NAME": "爆发",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。NL 可以无限次升级。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 !M! 次。NL 可以无限次升级。"
+  },
+  "${modID}:BlazingGuard": {
+    "NAME": "炽焰守护",
+    "DESCRIPTION": "获得 !B! 格挡。NL ${modID}:Even: 抓 1 张牌。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 格挡。NL ${modID}:Even: 抓 1 张并升级它。"
+  },
+  "${modID}:Cauterize": {
+    "NAME": "烧灼",
+    "DESCRIPTION": "回复 !M! 点生命。NL 将一张燃烧加入你的手牌。NL 消耗。",
+    "UPGRADE_DESCRIPTION": "回复 !M! 点生命。NL 将一张燃烧加入你的手牌。NL 消耗。"
+  },
+  "${modID}:Ignite": {
+    "NAME": "点燃",
+    "DESCRIPTION": "每当你造成未被格挡的攻击伤害时，施加 2 层 ${modID}:Burnt。",
+    "UPGRADE_DESCRIPTION": "每当你造成未被格挡的攻击伤害时，施加 2 层 ${modID}:Burnt。"
+  },
+  "${modID}:ParalyzingTouch": {
+    "NAME": "麻痹之触",
+    "DESCRIPTION": "造成 !D! 点伤害。NL 使一个敌人的力量减少 !M!。NL 消耗。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。NL 使一个敌人的力量减少 !M!。NL 消耗。"
+  },
+  "${modID}:DexterousKick": {
+    "NAME": "灵巧飞踢",
+    "DESCRIPTION": "造成 !D! 点伤害。NL 获得 !M! 点敏捷。NL 消耗。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。NL 获得 !M! 点敏捷。NL 消耗。"
+  },
+  "${modID}:UnbalancingWinds": {
+    "NAME": "失衡之风",
+    "DESCRIPTION": "随机对一个敌人造成两次 !D! 点伤害。NL 如果两次都击中同一敌人，施加 !M! 易伤。",
+    "UPGRADE_DESCRIPTION": "随机对一个敌人造成两次 !D! 点伤害。NL 如果两次都击中同一敌人，施加 !M! 易伤。"
+  },
+  "${modID}:GoWithTheFlow": {
+    "NAME": "随波逐流",
+    "DESCRIPTION": "${modID}:Odd: 抓 1 张牌。获得 !M! ${modID}:Flow。NL ${modID}:Even: 弃 2 张牌。获得 !M! [E]。",
+    "UPGRADE_DESCRIPTION": "${modID}:Odd: 抓 1 张牌。获得 !M! ${modID}:Flow。NL ${modID}:Even: 弃 2 张牌。获得 !M! [E]。"
+  },
+  "${modID}:WindOfChange": {
+    "NAME": "变革之风",
+    "DESCRIPTION": "转化你手牌中的最多 !M! 张牌。保留升级效果。NL 消耗。",
+    "UPGRADE_DESCRIPTION": "保留。NL 转化你手牌中的最多 !M! 张牌。保留升级效果。NL 消耗。"
+  },
+  "${modID}:StaticCharge": {
+    "NAME": "静电充能",
+    "DESCRIPTION": "获得 !B! 格挡。NL 获得 !M! ${modID}:Static。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 格挡。NL 获得 !M! ${modID}:Static。"
+  },
+  "${modID}:ElectricPotential": {
+    "NAME": "电能潜势",
+    "DESCRIPTION": "每当你失去生命时，获得 !M! ${modID}:Static。",
+    "UPGRADE_DESCRIPTION": "每当你失去生命时，获得 !M! ${modID}:Static。"
+  },
+  "${modID}:Thunderclap": {
+    "NAME": "雷霆轰鸣",
+    "DESCRIPTION": "造成 !D! 点伤害。每当你攻击该敌人时，对所有敌人造成 2 点伤害。NL 消耗。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。每当你攻击该敌人时，对所有敌人造成 2 点伤害。NL 消耗。"
+  },
+  "${modID}:UmbralEchoes": {
+    "NAME": "暗影回响",
+    "DESCRIPTION": "重放你的弃牌堆顶牌。NL 消耗。",
+    "UPGRADE_DESCRIPTION": "重放你的弃牌堆顶的其中一张牌。NL 消耗。"
+  },
+  "${modID}:ShotInTheDark": {
+    "NAME": "暗影一击",
+    "DESCRIPTION": "将一张 *黑暗 *箭矢洗入你的抽牌堆。",
+    "UPGRADE_DESCRIPTION": "将一张 *黑暗 *箭矢洗入你的抽牌堆。"
+  },
+  "${modID}:Blur": {
+    "NAME": "模糊",
+    "DESCRIPTION": "获得 !B! 格挡。NL 你的格挡不会在下个回合开始时移除。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 格挡。NL 你的格挡不会在下个回合开始时移除。"
+  },
+  "${modID}:Flight": {
+    "NAME": "飞行",
+    "DESCRIPTION": "获得 !M! ${modID}:Flight。如果层数全部消耗，陷入缠绕。NL 消耗。",
+    "UPGRADE_DESCRIPTION": "获得 !M! ${modID}:Flight。如果层数全部消耗，陷入缠绕。NL 消耗。"
+  },
+  "${modID}:Harmony": {
+    "NAME": "和谐",
+    "DESCRIPTION": "获得 2 ${modID}:Flow、4 ${modID}:Static、1 *火花 和 4 *诅咒 *格挡。",
+    "UPGRADE_DESCRIPTION": "获得 [#00FF00]3 ${modID}:Flow、[#00FF00]8 ${modID}:Static、1 *火花 和 [#00FF00]6 *诅咒 *格挡。",
+    "EXTENDED_DESCRIPTION": [
+      "获得 2 ${modID}:Flow、[#00FF00]6 ${modID}:Static、[#00FF00]2 *火花 和 [#00FF00]8 *诅咒 *格挡。"
+    ]
+  },
+  "${modID}:KindleSpirit": {
+    "NAME": "点燃之魂",
+    "DESCRIPTION": "在你的回合开始时，将一张 *火花 加入你的手牌。",
+    "UPGRADE_DESCRIPTION": "在你的回合开始时，将一张 *火花 加入你的手牌。"
+  },
+  "${modID}:PhoenixTenacity": {
+    "NAME": "凤凰坚韧",
+    "DESCRIPTION": "每当你抓到或消耗一张状态牌时，对最左边的敌人施加 !M! ${modID}:Burnt。NL 抓到的燃烧会立即消耗。",
+    "UPGRADE_DESCRIPTION": "每当你抓到或消耗一张状态牌时，对最左边的敌人施加 !M! ${modID}:Burnt。NL 抓到的燃烧会立即消耗。"
+  },
+  "${modID}:GustAspect": {
+    "NAME": "疾风化身",
+    "DESCRIPTION": "在你的回合结束时，获得 !M! ${modID}:Flow。",
+    "UPGRADE_DESCRIPTION": "固有。NL 在你的回合结束时，获得 !M! ${modID}:Flow。"
+  },
+  "${modID}:ThunderAspect": {
+    "NAME": "雷霆化身",
+    "DESCRIPTION": "在你的回合开始时，对所有敌人造成 !M! 点伤害。"
+  },
+  "${modID}:FlameAspect": {
+    "NAME": "烈焰化身",
+    "DESCRIPTION": "当你打出攻击时，使其在本场战斗中的伤害增加等同于你本回合已打出的攻击数。",
+    "UPGRADE_DESCRIPTION": "当你打出攻击时，使其在本场战斗中的伤害增加等同于你本回合已打出的攻击数+!M!。"
+  },
+  "${modID}:ShadowAspect": {
+    "NAME": "暗影化身",
+    "DESCRIPTION": "在你的回合开始时，所有人获得 !B! *Cursed *格挡。NL 在你的回合结束时，窃取所有人的一半格挡。",
+    "UPGRADE_DESCRIPTION": "在你的回合开始时，所有人获得 !B! *Cursed *格挡。NL 在你的回合结束时，窃取所有人的全部格挡。"
+  },
+  "${modID}:PastPresentFuture": {
+    "NAME": "过去现在未来",
+    "DESCRIPTION": "预见 3。NL 将你手牌中的一张牌放到抽牌堆顶。然后从弃牌堆中重复一次。NL 消耗。",
+    "UPGRADE_DESCRIPTION": "预见 5。NL 将你手牌中的一张牌放到抽牌堆顶。然后从弃牌堆中重复一次。NL 消耗。"
+  },
+  "${modID}:PerfectPosition": {
+    "NAME": "绝佳位置",
+    "DESCRIPTION": "本回合，${modID}:Odd、${modID}:Even、${modID}:Third 效果必定触发。NL 消耗。",
+    "UPGRADE_DESCRIPTION": "本回合，${modID}:Odd、${modID}:Even、${modID}:Third 效果必定触发。"
+  },
+  "${modID}:DrunkenMaster": {
+    "NAME": "醉拳大师",
+    "DESCRIPTION": "获得 1 *Confusion。",
+    "UPGRADE_DESCRIPTION": "获得 1 *Confusion。"
+  },
+  "${modID}:ClawFrenzy": {
+    "NAME": "利爪狂潮",
+    "DESCRIPTION": "造成 !D! 点伤害 X 次。NL 获得 !M! 易伤。NL ${modID}:Even: 额外造成 1 次打击。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 X 次。NL 获得 !M! 易伤。NL ${modID}:Even: 额外造成 1 次打击。"
+  },
+  "${modID}:PositionalStrike": {
+    "NAME": "方位打击",
+    "DESCRIPTION": "造成 !D! 点伤害。NL ${modID}:Odd: 伤害增加 !M!。NL ${modID}:Third: 造成双倍伤害。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。NL ${modID}:Odd: 伤害增加 !M!。NL ${modID}:Third: 造成双倍伤害。"
+  },
+  "${modID}:DragonsBreath": {
+    "NAME": "龙息",
+    "DESCRIPTION": "造成 !D! 点伤害。NL 施加 !M! ${modID}:Burnt。NL 每当敌人总共有 !${modID}:burntthreshold! 层 ${modID}:Burnt，费用减少 1。NL 将一张燃烧加入你的手牌。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。NL 施加 !M! ${modID}:Burnt。NL 每当敌人总共有 !${modID}:burntthreshold! 层 ${modID}:Burnt，费用减少 1。NL 将一张燃烧加入你的抽牌堆和弃牌堆。",
+    "EXTENDED_DESCRIPTION": [
+      "造成 !D! 点伤害。NL 施加 !M! Burnt。NL 每当敌人总共有 !${modID}:burntthreshold! 层 Burnt，费用减少 1。NL 将一张燃烧加入你的手牌。"
+    ]
+  },
+  "${modID}:Tornado": {
+    "NAME": "龙卷风",
+    "DESCRIPTION": "对随机敌人造成 !D! 点伤害 5 次。NL 每层 ${modID}:Flow 额外造成 !D! 点伤害。NL 消耗。",
+    "UPGRADE_DESCRIPTION": "对随机敌人造成 !D! 点伤害 5 次。NL 每层 ${modID}:Flow 额外造成 !D! 点伤害。NL 消耗。"
+  },
+  "${modID}:FlowState": {
+    "NAME": "流动之态",
+    "DESCRIPTION": "每当你获得或失去 ${modID}:Flow 时，对随机敌人造成 !D! 点伤害。",
+    "UPGRADE_DESCRIPTION": "每当你获得或失去 ${modID}:Flow 时，对随机敌人造成 !D! 点伤害。NL 获得 !M! ${modID}:Flow。"
+  },
+  "${modID}:ElementalSurge": {
+    "NAME": "元素涌动",
+    "DESCRIPTION": "你拥有的每种不同元素化身使你获得 !M! 力量和 !M! 敏捷。NL 消耗。",
+    "UPGRADE_DESCRIPTION": "你拥有的每种不同元素化身使你获得 !M! 力量和 !M! 敏捷。NL 消耗。"
+  },
+  "${modID}:VoidStalker": {
+    "NAME": "虚空潜行者",
+    "DESCRIPTION": "虚无。NL 每隔 3 回合进入 ${modID}:Void_Form。",
+    "UPGRADE_DESCRIPTION": "每隔 3 回合进入 ${modID}:Void_Form。"
+  },
+  "${modID}:HaulAfflictions": {
+    "NAME": "负疾收割",
+    "DESCRIPTION": "对所有敌人施加 3 层 ${modID}:Choke。NL 每有一个减益效果，对所有敌人造成 !M! 点伤害。",
+    "UPGRADE_DESCRIPTION": "对所有敌人施加 4 层 ${modID}:Choke 和 1 层虚弱。NL 每有一个减益效果，对所有敌人造成 !M! 点伤害。"
+  },
+  "${modID}:ShadowRitual": {
+    "NAME": "暗影仪式",
+    "DESCRIPTION": "获得 !B! 格挡。NL ${modID}:Even: [#FFFDE5]仪式开始。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 格挡。NL ${modID}:Even: [#FFFDE5]仪式开始。",
+    "EXTENDED_DESCRIPTION": [
+      "对所有敌人施加 1 层虚弱。NL ${modID}:Odd: [#FFFDE5]仪式继续。",
+      "对所有敌人施加 1 层易伤。NL 如果这是本回合打出的第 3 张牌，抓 2 张牌，获得 3 [E]，并消耗此牌。",
+      "对所有敌人施加 2 层易伤。NL 如果这是本回合打出的第 3 张牌，抓 3 张牌，获得 4 [E]，并消耗此牌。"
+    ]
+  },
+  "${modID}:OddSmokes": {
+    "NAME": "奇异烟雾",
+    "DESCRIPTION": "获得 !B! 格挡。NL ${modID}:Odd: 所有人获得 !M! *Cursed *格挡。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 格挡。NL ${modID}:Odd: 所有人获得 !M! *Cursed *格挡。"
+  },
+  "${modID}:DarklingPact": {
+    "NAME": "暗灵契约",
+    "DESCRIPTION": "失去 !M! 点生命。NL 召唤一只暗灵随从。NL 消耗。",
+    "UPGRADE_DESCRIPTION": "失去 !M! 点生命。NL 召唤一只暗灵随从。NL 消耗。"
+  },
+  "${modID}:TimelyBoost": {
+    "NAME": "及时强化",
+    "DESCRIPTION": "永久升级你手牌中的一张牌。NL 转瞬即逝。",
+    "UPGRADE_DESCRIPTION": "永久升级你手牌中的所有牌。NL 转瞬即逝。"
+  },
+  "${modID}:AuroraRay": {
+    "NAME": "极光射线",
+    "DESCRIPTION": "保留。NL 造成 !D! 点伤害。NL 每当被保留时，费用减少等同于未用掉的 [E]。",
+    "UPGRADE_DESCRIPTION": "保留。NL 造成 !D! 点伤害。NL 每当被保留时，费用减少等同于未用掉的 [E]。"
+  },
+  "${modID}:MagneticSiphon": {
+    "NAME": "磁能吸取",
+    "DESCRIPTION": "获得 !M! 金币。NL ${modID}:Odd: 消耗 25 金币，使目标敌人失去 25 生命。NL 消耗。",
+    "UPGRADE_DESCRIPTION": "获得 !M! 金币。NL ${modID}:Odd: 消耗 25 金币，使目标敌人失去 25 生命。NL 消耗。"
+  },
+  "${modID}:StormBringer": {
+    "NAME": "风暴使者",
+    "DESCRIPTION": "获得 !B! 格挡。NL 下回合，获得 !B! 格挡和 [E]。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 格挡。NL 下回合，获得 !B! 格挡和 [E] [E]。"
+  },
+  "${modID}:LightningConduit": {
+    "NAME": "闪电导管",
+    "DESCRIPTION": "抓 X 张牌。NL 使手牌中 X 张随机牌本回合费用减少 1。NL 消耗。",
+    "UPGRADE_DESCRIPTION": "抓 X 张牌。NL 使手牌中 X 张随机牌本回合费用减少 1。NL 获得 [E]。NL 消耗。"
+  },
+  "${modID}:Languor": {
+    "NAME": "倦怠",
+    "DESCRIPTION": "力量减少 1。NL 转瞬即逝。"
+  }
+}
