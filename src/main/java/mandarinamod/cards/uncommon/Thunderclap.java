@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import mandarinamod.MandarinaMod;
 import mandarinamod.cards.BaseCard;
 import mandarinamod.character.Mandarina;
-import mandarinamod.powers.ThunderClapped;
+import mandarinamod.powers.ThunderClappedPower;
 import mandarinamod.util.CardStats;
 
 public class Thunderclap extends BaseCard {
@@ -38,7 +38,7 @@ public class Thunderclap extends BaseCard {
         addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn)));
 
         // Apply the "Marked for Thunder" Power
-        addToBot(new ApplyPowerAction(m, p, new ThunderClapped(m, p)));
+        addToBot(new ApplyPowerAction(m, p, new ThunderClappedPower(m, p)));
     }
 
     @Override

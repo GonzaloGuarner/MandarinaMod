@@ -24,7 +24,7 @@ public class ConserveSpark extends BaseCard {
     public ConserveSpark() {
         super(ID, info);
         setBlock(2, 2); // Base block and upgraded block
-        this.retain = true; // Retain mechanic
+        setSelfRetain(true);
         initializeDescription();
     }
 

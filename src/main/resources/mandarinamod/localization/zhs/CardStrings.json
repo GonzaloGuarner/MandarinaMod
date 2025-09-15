@@ -374,10 +374,10 @@
   },
   "${modID}:ShadowRitual": {
     "NAME": "暗影仪式",
-    "DESCRIPTION": "获得 !B! 格挡。NL ${modID}:Even: [#FFFDE5]仪式开始。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 格挡。NL ${modID}:Even: [#FFFDE5]仪式开始。",
+    "DESCRIPTION": "获得 !B! 格挡。NL ${modID}:Even: 仪式开始。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 格挡。NL ${modID}:Even: 仪式开始。",
     "EXTENDED_DESCRIPTION": [
-      "对所有敌人施加 1 层虚弱。NL ${modID}:Odd: [#FFFDE5]仪式继续。",
+      "对所有敌人施加 1 层虚弱。NL ${modID}:Odd: 仪式继续。",
       "对所有敌人施加 1 层易伤。NL 如果这是本回合打出的第 3 张牌，抓 2 张牌，获得 3 [E]，并消耗此牌。",
       "对所有敌人施加 2 层易伤。NL 如果这是本回合打出的第 3 张牌，抓 3 张牌，获得 4 [E]，并消耗此牌。"
     ]

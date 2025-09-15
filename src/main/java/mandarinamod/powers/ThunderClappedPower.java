@@ -8,13 +8,13 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import mandarinamod.MandarinaMod;
 
-public class ThunderClapped extends BasePower {
-    public static final String POWER_ID = MandarinaMod.makeID(ThunderClapped.class.getSimpleName());
+public class ThunderClappedPower extends BasePower {
+    public static final String POWER_ID = MandarinaMod.makeID(ThunderClappedPower.class.getSimpleName());
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 
     private static final int DAMAGE_TO_ALL = 2;
 
-    public ThunderClapped(AbstractCreature owner, AbstractCreature source) {
+    public ThunderClappedPower(AbstractCreature owner, AbstractCreature source) {
         super(POWER_ID, PowerType.DEBUFF, false, owner, source, DAMAGE_TO_ALL);
         this.loadRegion("talk_to_hand");
         updateDescription();
