@@ -22,20 +22,20 @@ public class CracklingArcAction extends AbstractGameAction {
     @Override
     public void update() {
         if (this.duration == Settings.ACTION_DUR_FAST && this.target != null) {
-            AbstractMonster targetMonster = (AbstractMonster) this.target;
 
-            // Trigger visual effect and apply the damage
+        if(!target.isDeadOrEscaped()){
             AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, AttackEffect.LIGHTNING));
             this.target.damage(this.info);
+        }
+
 
             // Check if the target was killed
-            if (targetMonster.isDying || targetMonster.currentHealth <= 0) {
+            if (target.isDying || target.currentHealth <= 0) {
                 if (baseDamage > 0) {
                     // Find the next valid enemy
                     for (AbstractMonster nextTarget : AbstractDungeon.getCurrRoom().monsters.monsters) {
-                        if (!nextTarget.isDeadOrEscaped() && nextTarget != targetMonster) {
+                        if (!nextTarget.isDeadOrEscaped() && nextTarget != target) {
                             this.addToBot(new CracklingArcAction(nextTarget, new DamageInfo(this.info.owner, baseDamage, this.info.type)));
-                            break;
                         }
                     }
                 }

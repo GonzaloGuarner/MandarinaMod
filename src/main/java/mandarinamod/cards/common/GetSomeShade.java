@@ -1,6 +1,8 @@
 package mandarinamod.cards.common;
 
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.ModifyBlockAction;
+import com.megacrit.cardcrawl.actions.common.ModifyDamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -38,10 +40,7 @@ public class GetSomeShade extends BaseCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         // Gain block
         addToBot(new GainBlockAction(p, this.block));
-
-        // Increase the block of this card by 1 for the rest of the combat
-        this.baseBlock += this.magicNumber;
-        this.applyPowers(); // Update the block shown
+        addToBot(new ModifyBlockAction(this.uuid, this.magicNumber));
     }
 
     @Override

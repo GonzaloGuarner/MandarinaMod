@@ -57,7 +57,7 @@
       " #yStatic #yCharge."
     ]
   },
-  "${modID}:ThunderClapped": {
+  "${modID}:ThunderClappedPower": {
     "NAME": "Thunderclapped",
     "DESCRIPTIONS": [
       "Whenever you attack this enemy, deal #b",

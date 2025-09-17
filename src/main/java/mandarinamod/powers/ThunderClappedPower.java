@@ -16,7 +16,6 @@ public class ThunderClappedPower extends BasePower {
 
     public ThunderClappedPower(AbstractCreature owner, AbstractCreature source) {
         super(POWER_ID, PowerType.DEBUFF, false, owner, source, DAMAGE_TO_ALL);
-        this.loadRegion("talk_to_hand");
         updateDescription();
     }
 

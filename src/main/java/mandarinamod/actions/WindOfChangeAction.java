@@ -1,6 +1,8 @@
 package mandarinamod.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.TransformCardInHandAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -27,7 +29,10 @@ public class WindOfChangeAction extends AbstractGameAction {
         } else if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
             for(AbstractCard c :  AbstractDungeon.handCardSelectScreen.selectedCards.group) {
                 int index = AbstractDungeon.handCardSelectScreen.selectedCards.group.indexOf(c);
-                AbstractDungeon.actionManager.addToBottom(new TransformCardAction(c, getRandomTransformedCard(c)));
+                //AbstractDungeon.actionManager.addToBottom(new TransformCardInHandAction(index, getRandomTransformedCard(c)));
+                //AbstractDungeon.actionManager.addToBottom(new TransformCardAction(c, getRandomTransformedCard(c)));
+                addToBot(new ExhaustSpecificCardAction(c, AbstractDungeon.player.hand));
+                addToBot(new MakeTempCardInHandAction(AbstractDungeon.returnTrulyRandomCardInCombat()));
             }
             AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
         }

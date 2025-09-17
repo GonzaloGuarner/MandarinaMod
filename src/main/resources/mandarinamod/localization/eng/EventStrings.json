@@ -25,7 +25,7 @@
       "After you have made your choice, you feel the effects resonate through your body. The orchard seems to darken as the magic dissipates. You take a moment to admire the mystical grove before you continue your journey."
     ],
     "OPTIONS": [
-      "[Withered Apple] #gFully #gheal #gHP, but gain #r2 #Languor.",
+      "[Withered Apple] #gFully #gheal #gHP, but gain #r2 #rLanguor.",
       "[Golden Citrus] Gain #g100 #gGold, but #rlose a #rrandom card.",
       "[Forbidden Fruit] Gain 2 Relics. #rLose #r",
       " #rHP."

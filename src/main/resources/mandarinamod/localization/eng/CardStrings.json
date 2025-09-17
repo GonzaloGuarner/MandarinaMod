@@ -80,8 +80,8 @@
   },
   "${modID}:CracklingArc": {
     "NAME": "Crackling Arc",
-    "DESCRIPTION": "Deal !D! damage. NL If this kills an enemy, repeat on a nearby one.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL If this kills an enemy, repeat on a nearby one."
+    "DESCRIPTION": "Deal !D! damage. NL If this kills an enemy, repeat on nearby ones.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL If this kills an enemy, repeat on nearby ones."
   },
   "${modID}:ElectrifyingBarrier": {
     "NAME": "Electrifying Barrier",
