@@ -155,7 +155,7 @@ public class Mandarina extends AbstractPlayerWithMinions {
         retVal.add(Defend.ID);
         retVal.add(SwiftJab.ID);
         retVal.add(Recall.ID);
-//       retVal.add(Thunderclap.ID);
+ //     retVal.add(DragonsBreath.ID);
 //        retVal.add(CracklingArc.ID);
 
         return retVal;

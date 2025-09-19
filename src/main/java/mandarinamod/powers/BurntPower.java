@@ -1,5 +1,7 @@
 package mandarinamod.powers;
 
+import com.badlogic.gdx.graphics.Color;
+import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.HealthBarRenderPower;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -7,9 +9,10 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import mandarinamod.MandarinaMod;
 
-public class BurntPower extends BasePower {
+public class BurntPower extends BasePower implements HealthBarRenderPower {
     public static final String POWER_ID = MandarinaMod.makeID(BurntPower.class.getSimpleName());
     private static final String NAME = "Burnt";
+    private static final Color burntColor = new Color(220F / 255.0F, 160F / 255.0F, 0f, 1f);
 
     public BurntPower(AbstractCreature owner, int amount) {
         super(POWER_ID, PowerType.DEBUFF, true, owner, amount);
@@ -33,5 +36,15 @@ public class BurntPower extends BasePower {
     @Override
     public void updateDescription() {
         this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+    }
+
+    @Override
+    public int getHealthBarAmount() {
+        return this.amount;
+    }
+
+    @Override
+    public Color getColor() {
+        return burntColor;
     }
 }

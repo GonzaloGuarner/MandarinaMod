@@ -344,8 +344,8 @@
   },
   "${modID}:DragonsBreath": {
     "NAME": "Dragon's Breath",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! ${modID}:Burnt. NL Costs 1 less for every !${modID}:burntthreshold! ${modID}:Burnt on all enemies. NL Add a Burn to your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Apply !M! ${modID}:Burnt. NL Costs 1 less for every !${modID}:burntthreshold! ${modID}:Burnt on all enemies. Add a Burn to your draw and discard piles.",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! ${modID}:Burnt. NL Costs 1 less for every !${modID}:burntthreshold! ${modID}:Burnt on all enemies. NL Add a Burn to your discard pile.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Apply !M! ${modID}:Burnt. NL Costs 1 less for every !${modID}:burntthreshold! ${modID}:Burnt on all enemies. Add a Burn to your discard and draw piles.",
     "EXTENDED_DESCRIPTION": [
       "Deal !D! damage. NL Apply !M! Burnt. NL Costs 1 less for every !${modID}:burntthreshold! Burnt on all enemies. NL Add a Burn to your hand."
     ]

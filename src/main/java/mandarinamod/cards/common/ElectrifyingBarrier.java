@@ -24,8 +24,8 @@ public class ElectrifyingBarrier extends BaseCard {
             1
     );
 
-    private static final int BLOCK = 7;
-    private static final int SPARK_TRIGGER_THRESHOLD = 10;       // Sparks generated per X damage blocked
+    private static final int BLOCK = 6;
+    private static final int SPARK_TRIGGER_THRESHOLD = 9;       // Sparks generated per X damage blocked
     private static final int UPGRADE_TRIGGER_THRESHOLD = -3;
 
     public ElectrifyingBarrier() {

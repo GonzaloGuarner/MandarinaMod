@@ -30,8 +30,10 @@ public class DragonsBreath extends BaseCard implements BranchingUpgradesCard {
 
     private static final int BASE_DAMAGE = 8;
     private static final int BASE_BURNT = 8;
-    private static final int UPGRADED_DAMAGE = 2;
+    private static final int UPGRADED_DAMAGE = 0;
     private static final int UPGRADED_BURNT = 2;
+    private static final int UPGRADED_DAMAGE2 = 0;
+    private static final int UPGRADED_BURNT2 = 5;
     private static final int BURNT_THRESHOLD = 4;
     private static final int BURNT_THRESHOLD_UPGRADED = -1;
 
@@ -51,14 +53,11 @@ public class DragonsBreath extends BaseCard implements BranchingUpgradesCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn))); // Deal damage
-        addToBot(new ApplyPowerAction(m, p, new BurntPower(m, this.magicNumber), this.magicNumber)); // Apply Burnt
-
-        if (this.upgraded && !upgradeBranchOne) { // Upgrade Path 2: Burns to Draw/Discard
+        addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn)));
+        addToBot(new ApplyPowerAction(m, p, new BurntPower(m, this.magicNumber), this.magicNumber));
+        addToBot(new MakeTempCardInDiscardAction(new Burn(), 1));
+        if (this.upgraded && !upgradeBranchOne) { // Upgrade Path 2: Burns to Draw+Discard
             addToBot(new MakeTempCardInDrawPileAction(new Burn(), 1, true, true));
-            addToBot(new MakeTempCardInDiscardAction(new Burn(), 1));
-        } else { // Default behavior or Upgrade Path 1
-            addToBot(new MakeTempCardInHandAction(new Burn()));
         }
     }
 
@@ -109,7 +108,6 @@ public class DragonsBreath extends BaseCard implements BranchingUpgradesCard {
 
 
     public void baseUpgrade() {
-        // Upgrade Path 2: Burns to Draw/Discard
         upgradeDamage(UPGRADED_DAMAGE);
         upgradeMagicNumber(UPGRADED_BURNT);
         this.rawDescription = cardStrings.DESCRIPTION;
@@ -120,6 +118,8 @@ public class DragonsBreath extends BaseCard implements BranchingUpgradesCard {
 
 
     public void branchUpgrade() {
+        upgradeDamage(UPGRADED_DAMAGE2);
+        upgradeMagicNumber(UPGRADED_BURNT2);
         this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
         upgradeBranchOne = false;
         initializeDescription();

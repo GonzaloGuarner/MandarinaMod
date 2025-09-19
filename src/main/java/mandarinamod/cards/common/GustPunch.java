@@ -25,9 +25,9 @@ public class GustPunch extends BaseCard {
     );
 
     private static final int DAMAGE = 7;             // Base damage
-    private static final int UPGRADE_DAMAGE = 2;     // Increase damage by 2 when upgraded
+    private static final int UPGRADE_DAMAGE = 3;     // Increase damage by 2 when upgraded
     private static final int WEAK = 1;               // Amount of Weak applied
-    private static final int FLOW = 2;               // Amount of Flow gained
+    private static final int FLOW = 1;               // Amount of Flow gained
 
     public GustPunch() {
         super(ID, info);

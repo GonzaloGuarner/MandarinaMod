@@ -30,7 +30,7 @@ public class FuelReserve extends BaseCard {
             1
     );
 
-    private static final int ENERGY = 2;
+    private static final int ENERGY = 1;
     private static final int UPGRADE_ENERGY = 1;
     private boolean isPreview;
     private AbstractCard sparkingThings;
@@ -46,7 +46,7 @@ public class FuelReserve extends BaseCard {
             sparkingThings = new SparkingThings(true);
             this.sparkingThings.upgrade();
             cardsToPreview = sparkingThings;
-            this.rawDescription = "Gain " + this.magicNumber + "[E]. NL Add a *Sparking *Things+1 to your deck. NL Fleeting.";
+            this.rawDescription = "Gain [E]. NL Add a *Sparking *Things+1 to your deck. NL Fleeting.";
         }
         initializeDescription();
     }
