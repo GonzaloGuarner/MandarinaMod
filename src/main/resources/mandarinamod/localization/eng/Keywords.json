@@ -50,14 +50,14 @@
       "Void Form",
       "Void_Form"
     ],
-    "DESCRIPTION": "Embracing the Void, deal powerful damage and become Intangible."
+    "DESCRIPTION": "Deal increased damage and become Intangible."
   },
   {
     "PROPER_NAME": "Static",
     "NAMES": [
       "Static"
     ],
-    "DESCRIPTION": "The next time you are attacked, deal damage back. If you have Thunder Aspect, hit ALL enemies."
+    "DESCRIPTION": "The next time you are attacked, deal damage back."
   },
   {
     "PROPER_NAME": "Burnt",

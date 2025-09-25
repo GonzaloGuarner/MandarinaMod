@@ -1,5 +1,6 @@
 package mandarinamod.cards.uncommon;
 
+import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.BranchingUpgradesCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -12,9 +13,10 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import mandarinamod.cards.BaseCard;
 import mandarinamod.character.Mandarina;
+import mandarinamod.powers.FlowPower;
 import mandarinamod.util.CardStats;
 
-public class DexterousKick extends BaseCard {
+public class DexterousKick extends BaseCard implements BranchingUpgradesCard {
     public static final String ID = makeID(DexterousKick.class.getSimpleName());
     private static final CardStats info = new CardStats(
             Mandarina.Meta.CARD_COLOR,  // Specific card color for Mandarina
@@ -34,11 +36,15 @@ public class DexterousKick extends BaseCard {
     private static final int UPGRADE_DAMAGE = 3;    // Increase damage to 11 when upgraded
     private static final int DEXTERITY_GAIN = 1;
     private static final int UPGRADE_DEXTERITY_GAIN = 1;
+    private static final int FLOW = 4;
+
+    private boolean upgradeBranchOne = true;
 
     public DexterousKick() {
         super(ID, info);
-        setDamage(DAMAGE, UPGRADE_DAMAGE);
-        setMagic(DEXTERITY_GAIN, UPGRADE_DEXTERITY_GAIN);  // Magic number represents Dexterity gain
+        setDamage(DAMAGE);
+        setMagic(DEXTERITY_GAIN);  // Magic number represents Dexterity gain
+        setCustomVar("flowNumber", FLOW);
         initializeDescription();
         this.exhaust = true; // The card exhausts after use
     }
@@ -48,8 +54,12 @@ public class DexterousKick extends BaseCard {
         // Deal damage to target enemy
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
 
-        // Gain Dexterity
-        addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, this.magicNumber), this.magicNumber));
+        if (upgradeBranchOne){
+            addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, this.magicNumber), this.magicNumber));
+        }else{
+            addToBot(new ApplyPowerAction(p, p, new FlowPower(p, FLOW), FLOW));
+        }
+
     }
 
     @Override
@@ -59,11 +69,31 @@ public class DexterousKick extends BaseCard {
 
     @Override
     public void upgrade() {
-        if (!upgraded) {
-            upgradeName();
-            upgradeDamage(UPGRADE_DAMAGE); // Increase damage by 3
-            upgradeMagicNumber(UPGRADE_DEXTERITY_GAIN); // Increase Dexterity gain by 1
-            initializeDescription();
+        if (!this.upgraded) {
+            super.upgrade();
+            if (isBranchUpgrade()) {
+                branchUpgrade();
+            } else {
+                baseUpgrade();
+            }
         }
+    }
+
+    public void baseUpgrade() {
+        upgradeName();
+        upgradeDamage(UPGRADE_DAMAGE); // Increase damage by 3
+        upgradeMagicNumber(UPGRADE_DEXTERITY_GAIN); // Increase Dexterity gain by 1
+        this.rawDescription = cardStrings.DESCRIPTION;
+        upgradeBranchOne = true;
+        initializeDescription();
+
+    }
+
+
+    public void branchUpgrade() {
+        upgradeDamage(UPGRADE_DAMAGE);
+        this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+        upgradeBranchOne = false;
+        initializeDescription();
     }
 }

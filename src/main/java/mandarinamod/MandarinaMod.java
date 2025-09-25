@@ -13,6 +13,7 @@ import mandarinamod.events.*;
 import mandarinamod.relics.BaseRelic;
 import mandarinamod.util.GeneralUtils;
 import mandarinamod.util.KeywordInfo;
+import mandarinamod.util.SoundManager;
 import mandarinamod.util.TextureLoader;
 import com.badlogic.gdx.Files;
 import com.badlogic.gdx.Gdx;
@@ -174,7 +175,7 @@ public class MandarinaMod implements
     public static String relicPath(String file) {
         return resourcesFolder + "/images/relics/" + file;
     }
-
+    public static String soundPath(String file){return resourcesFolder+ "/audio/" + file;}
     /**
      * Checks the expected resources path based on the package name.
      */
@@ -279,7 +280,7 @@ public class MandarinaMod implements
 
     @Override
     public void receiveAddAudio() {
-        BaseMod.addAudio(makeID("AURORA"), "audio/big_thunder.ogg");
+        SoundManager.addSounds();
     }
 
 

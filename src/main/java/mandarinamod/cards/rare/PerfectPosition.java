@@ -33,6 +33,7 @@ public class PerfectPosition extends BaseCard {
         addToBot(new ApplyPowerAction(player, player, new PerfectPositionPower(player,1)));
     }
 
+
     @Override
     public AbstractCard makeCopy() {
         return new PerfectPosition();

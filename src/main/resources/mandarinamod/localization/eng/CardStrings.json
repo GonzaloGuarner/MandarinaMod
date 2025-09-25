@@ -61,12 +61,17 @@
   "${modID}:GustPunch": {
     "NAME": "Gust Punch",
     "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL Gain 1 ${modID}:Flow."
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL Gain 1 ${modID}:Flow for each enemy alive."
+  },
+  "${modID}:CrossCurrents": {
+    "NAME": "Cross Currents",
+    "DESCRIPTION": "EVERYONE loses !M! Block. NL If you have ${modID}:Flow, deal !D! damage to a random enemy for each target hit.",
+    "UPGRADE_DESCRIPTION": "EVERYONE loses !M! Block. NL If you have ${modID}:Flow, deal !D! damage to a random enemy per target hit."
   },
   "${modID}:ShadowPunch": {
     "NAME": "Shadow Punch",
     "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable."
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL ${modID}:Even: Shuffle this card into your draw pile."
   },
   "${modID}:SmogBall": {
     "NAME": "Smog Ball",
@@ -85,13 +90,13 @@
   },
   "${modID}:ElectrifyingBarrier": {
     "NAME": "Electrifying Barrier",
-    "DESCRIPTION": "Gain !B! Block. NL Gain 1 *Spark. NL Next turn, gain 1 *Spark for every !M! damage blocked.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Gain 1 *Spark. NL Next turn, gain 1 *Spark for every !M! damage blocked."
+    "DESCRIPTION": "Gain !B! Block. NL Next turn, gain 1 *Spark for every !M! damage blocked.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Next turn, gain 1 *Spark for every !M! damage blocked."
   },
   "${modID}:ConserveSpark": {
     "NAME": "Conserve Spark",
     "DESCRIPTION": "Retain. NL Gain !B! Block. NL Unspent energy is conserved this turn.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Gain !B! Block. NL Unspent energy is conserved this turn."
+    "UPGRADE_DESCRIPTION": "Retain. NL Add 1 *Spark to your hand. NL Unspent energy is conserved this turn."
   },
 "${modID}:EbbAndFlow": {
     "NAME": "Ebb and Flow",
@@ -106,7 +111,7 @@
   "${modID}:MidfightFire": {
     "NAME": "Midfight Campfire",
     "DESCRIPTION": "Gain !B! Block. NL Add !M! *Spark to your hand.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Add !M! *Spark to your hand."
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Upgrade all cards in your hand for the rest of combat."
   },
   "${modID}:ElementalStrike": {
     "NAME": "Elemental Strike",
@@ -124,8 +129,8 @@
   },
   "${modID}:PushThrough": {
     "NAME": "Push Through",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy has Block, play an echo of this card.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL If the enemy has Block, play an echo of this card."
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy has Block, play this again.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL If the enemy has Block, play this again."
   },
   "${modID}:UmbralChains": {
     "NAME": "Umbral Chains",
@@ -149,8 +154,8 @@
   },
   "${modID}:PressureRelief": {
     "NAME": "Pressure Relief",
-    "DESCRIPTION": "Apply !M! ${modID}:Pressure. All enemies lose HP equal to twice their ${modID}:Pressure. NL Remove all ${modID}:Pressure from the target.",
-    "UPGRADE_DESCRIPTION": "Apply !M! ${modID}:Pressure. All enemies lose HP equal to twice their ${modID}:Pressure. NL Remove all ${modID}:Pressure from the target."
+    "DESCRIPTION": "Apply !M! ${modID}:Pressure. ALL enemies lose HP equal to twice their ${modID}:Pressure. NL Remove all ${modID}:Pressure from the target.",
+    "UPGRADE_DESCRIPTION": "Apply !M! ${modID}:Pressure. ALL enemies lose HP equal to twice their ${modID}:Pressure. NL Remove all ${modID}:Pressure from the target."
   },
   "${modID}:EssenceBarrier": {
     "NAME": "Essence Barrier",
@@ -163,8 +168,8 @@
   },
   "${modID}:OddOdds": {
     "NAME": "Odd Odds",
-    "DESCRIPTION": "Guess the type of the top card of the draw pile. NL If your guess is correct: NL ${modID}:Odd: Draw 3 cards. NL ${modID}:Even: Gain [E] [E] [E]. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Guess the type of the top card of the draw pile. NL If your guess is correct: NL ${modID}:Odd: Draw 3 cards. NL ${modID}:Even: Gain [E] [E] [E]. NL Exhaust."
+    "DESCRIPTION": "Guess the type of the top card of your draw pile. NL If your guess is correct: NL ${modID}:Odd: Draw 3 cards. NL ${modID}:Even: Gain [E] [E] [E]. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Guess the type of the top card of your draw pile. NL If your guess is correct: NL ${modID}:Odd: Draw 3 cards. NL ${modID}:Even: Gain [E] [E] [E]. NL Exhaust."
   },
   "${modID}:AttackGuessChoice": {
     "NAME": "Attack",
@@ -207,7 +212,10 @@
   "${modID}:BlazingGuard": {
     "NAME": "Blazing Guard",
     "DESCRIPTION": "Gain !B! Block. NL ${modID}:Even: Draw 1 card.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL ${modID}:Even: Draw and upgrade 1 card."
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL ${modID}:Even: Draw and upgrade 1 card.",
+    "EXTENDED_DESCRIPTION": [
+      "Gain !B! Block. NL ${modID}:Even: Draw 1 card. NL ${modID}:Third: Whenever you are attacked this turn, apply !${modID}:burntnumber! ${modID}:Burnt."
+    ]
   },
   "${modID}:Cauterize": {
     "NAME": "Cauterize",
@@ -228,12 +236,12 @@
   "${modID}:DexterousKick": {
     "NAME": "Dexterous Kick",
     "DESCRIPTION": "Deal !D! damage. NL Gain !M! Dexterity. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain !M! Dexterity. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain !${modID}:flowNumber! ${modID}:Flow. NL Exhaust."
   },
   "${modID}:UnbalancingWinds": {
     "NAME": "Unbalancing Winds",
-    "DESCRIPTION": "Deal !D! damage to a random enemy twice. NL If both hits land on the same enemy, apply !M! Vulnerable.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to a random enemy twice. NL If both hits land on the same enemy, apply !M! Vulnerable."
+    "DESCRIPTION": "Deal !D! damage randomly 3 times. NL If at least 2 hits land on the same enemy, apply !M! Vulnerable.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to a random enemy twice. NL If both hit the same enemy, gain a random Skill. NL It costs 0 this turn."
   },
   "${modID}:GoWithTheFlow": {
     "NAME": "Go with the Flow",
@@ -257,8 +265,8 @@
   },
   "${modID}:Thunderclap": {
     "NAME": "Thunderclap",
-    "DESCRIPTION": "Deal !D! damage. Whenever you attack this enemy, deal 2 damage to all enemies. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. Whenever you attack this enemy, deal 2 damage to all enemies. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. Whenever you attack this enemy, deal 2 damage to ALL enemies. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. Whenever you attack this enemy, deal 2 damage to ALL enemies. NL Exhaust."
   },
   "${modID}:UmbralEchoes": {
     "NAME": "Umbral Echoes",
@@ -305,7 +313,7 @@
   },
   "${modID}:ThunderAspect": {
     "NAME": "Thunder Aspect",
-    "DESCRIPTION": "At the start of your turn, deal !M! damage to ALL enemies."
+    "DESCRIPTION": "At the start of your turn, gain !M! ${modID}:Static. ${modID}:Static affects ALL enemies."
   },
   "${modID}:FlameAspect": {
     "NAME": "Flame Aspect",
@@ -344,10 +352,10 @@
   },
   "${modID}:DragonsBreath": {
     "NAME": "Dragon's Breath",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! ${modID}:Burnt. NL Costs 1 less for every !${modID}:burntthreshold! ${modID}:Burnt on all enemies. NL Add a Burn to your discard pile.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Apply !M! ${modID}:Burnt. NL Costs 1 less for every !${modID}:burntthreshold! ${modID}:Burnt on all enemies. Add a Burn to your discard and draw piles.",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! ${modID}:Burnt. NL Costs 1 less for every !${modID}:burntthreshold! ${modID}:Burnt on ALL enemies. NL Add a Burn to your discard pile.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Apply !M! ${modID}:Burnt. NL Costs 1 less for every !${modID}:burntthreshold! ${modID}:Burnt on ALL enemies. Add a Burn to your discard and draw piles.",
     "EXTENDED_DESCRIPTION": [
-      "Deal !D! damage. NL Apply !M! Burnt. NL Costs 1 less for every !${modID}:burntthreshold! Burnt on all enemies. NL Add a Burn to your hand."
+      "Deal !D! damage. NL Apply !M! Burnt. NL Costs 1 less for every !${modID}:burntthreshold! Burnt on ALL enemies. NL Add a Burn to your hand."
     ]
   },
   "${modID}:Tornado": {
@@ -393,7 +401,7 @@
   "${modID}:DarklingPact":{
   "NAME": "Darkling Pact",
   "DESCRIPTION": "Lose !M! HP. NL Summon a Darkling Minion. NL Exhaust.",
-  "UPGRADE_DESCRIPTION": "Lose !M! HP. NL Summon a Darkling Minion. NL Exhaust."
+  "UPGRADE_DESCRIPTION": "Lose !M! HP. NL Summon a [#00FF00]Bigger Darkling Minion. NL Exhaust."
   },
   "${modID}:TimelyBoost":{
     "NAME": "Timely Boost",

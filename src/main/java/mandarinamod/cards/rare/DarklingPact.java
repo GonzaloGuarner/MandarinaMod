@@ -25,7 +25,7 @@ public class DarklingPact extends BaseCard {
     // Darkling Pact constructor
     public DarklingPact() {
         super(ID, info);
-        setMagic(6,-3); // Represents the HP loss
+        setMagic(6,-2); // Represents the HP loss
         setExhaust(true);
         initializeDescription();
     }

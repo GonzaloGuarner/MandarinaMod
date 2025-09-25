@@ -34,8 +34,8 @@ public class ShadowPunch extends BaseCard implements BranchingUpgradesCard {
 
     public ShadowPunch() {
         super(ID, info);
-        setDamage(DAMAGE, UPGRADE_DAMAGE);
-        setMagic(VULNERABLE, UPGRADE_VULNERABLE);
+        setDamage(DAMAGE);
+        setMagic(VULNERABLE);
     }
 
     @Override
@@ -59,11 +59,10 @@ public class ShadowPunch extends BaseCard implements BranchingUpgradesCard {
     public void upgrade() {
         if (!this.upgraded) {
             super.upgrade();
-            //upgradeName();
             if (isBranchUpgrade()) {
-                branchUpgrade(); // Upgrade Path 1
+                branchUpgrade();
             } else {
-                baseUpgrade(); // Upgrade Path 2
+                baseUpgrade();
             }
         }
     }

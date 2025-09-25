@@ -14,10 +14,7 @@ public class PerfectPositionPower extends BasePower {
     public PerfectPositionPower(AbstractCreature owner, int amount) {
         super(POWER_ID, PowerType.BUFF, true, owner, amount);
         this.name = NAME;
-        this.updateDescription();
-
-        // Activate Perfect Position
-        CardUtils.setPerfectPosition(true);
+        updateDescription();
     }
 
     @Override
@@ -26,7 +23,7 @@ public class PerfectPositionPower extends BasePower {
         CardUtils.setPerfectPosition(false);
     }
     @Override
-    public void atEndOfRound() {
+    public void atEndOfTurn(boolean isPlayer){
         if (this.amount == 0) {
             this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
         } else {
@@ -35,11 +32,12 @@ public class PerfectPositionPower extends BasePower {
     }
     @Override
     public void onVictory(){
+        CardUtils.setPerfectPosition(false);
         this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
     }
 
     @Override
     public void updateDescription() {
-        this.description = "For the rest of this turn, all positional conditions are always fulfilled.";
+        this.description = DESCRIPTIONS[0];
     }
 }

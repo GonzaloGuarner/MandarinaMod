@@ -54,7 +54,7 @@
     "NAME": "Electric Potential",
     "DESCRIPTIONS": [
       "Whenever you lose HP, gain #b",
-      " #yStatic #yCharge."
+      " #yStatic."
     ]
   },
   "${modID}:ThunderClappedPower": {
@@ -88,7 +88,14 @@
     "NAME": "Burnt",
     "DESCRIPTIONS": [
       "At the start of its turn, loses #b",
-      " HP. Then, #yBurnt reduce stacks by half."
+      " HP, then reduce #yBurnt by half."
+    ]
+  },
+  "${modID}:FirePlacePower": {
+    "NAME": "Fire Place",
+    "DESCRIPTIONS": [
+      "When attacked, gives #b",
+      " #yBurnt back."
     ]
   },
   "${modID}:GustAspectPower": {
@@ -101,8 +108,8 @@
   "${modID}:ThunderAspectPower": {
     "NAME": "Thunder Aspect",
     "DESCRIPTIONS": [
-      "At the end of your turn, deal #b",
-      " damage to ALL enemies."
+      "At the start of your turn, gain #b",
+      " #yStatic."
     ]
   },
   "${modID}:FlameAspectPower": {
@@ -133,7 +140,7 @@
   "${modID}:VoidFormPower": {
     "NAME": "Void Form",
     "DESCRIPTIONS": [
-      "Increased damage. Deal double damage if affected by #yShadow #yAspect."
+      "Deal 50% more damage. Deal 50% more if affected by #yShadow #yAspect."
     ]
   },
   "${modID}:PerfectPositionPower": {

@@ -24,11 +24,11 @@ public class EssenceBarrier extends BaseCard {
     );
 
     // Base values for block
-    private static final int BLOCK = 8;
-    private static final int UPGRADE_BLOCK = 3;
+    private static final int BLOCK = 7;
+    private static final int UPGRADE_BLOCK = 2;
 
     // Custom variable for extra block
-    private static final int EXTRA_BLOCK = 3;
+    private static final int EXTRA_BLOCK = 4;
     private static final int UPGRADE_EXTRA_BLOCK = 1;
 
     public EssenceBarrier() {

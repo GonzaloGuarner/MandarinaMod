@@ -50,14 +50,10 @@ public class OddSmokes extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new GainBlockAction(AbstractDungeon.player, this.block)); // Grant block to the player
 
         // Check if the card is played in an odd position
         if (CardUtils.isOddPosition() || CardUtils.isPerfectPosition()) { // Odd position: 1st, 3rd, 5th, etc.
             BlockModContainer cursed = new BlockModContainer(this, new CursedBlock());
-            // Player and any friendly minions also gain block
-            addToBot(new GainCustomBlockAction(cursed, AbstractDungeon.player, this.magicNumber));
-
             if (AbstractDungeon.player instanceof AbstractPlayerWithMinions){
                 MonsterGroup monstersGroup = ((AbstractPlayerWithMinions)AbstractDungeon.player).getMinions();
                 if(!monstersGroup.monsters.isEmpty()){
@@ -68,7 +64,10 @@ public class OddSmokes extends BaseCard {
             AbstractDungeon.getMonsters().monsters.forEach(monster -> {
                 addToBot(new GainCustomBlockAction(cursed, monster, this.magicNumber)); // Enemies gain block
             });
+            addToBot(new GainCustomBlockAction(cursed, AbstractDungeon.player, this.magicNumber));
         }
+
+        addToBot(new GainBlockAction(AbstractDungeon.player, this.block));
     }
     @Override
     public void triggerOnGlowCheck() {

@@ -2,20 +2,19 @@ package mandarinamod.vfx.combat;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
-
-import static mandarinamod.MandarinaMod.makeID;
+import mandarinamod.util.SoundManager;
 
 public class AuroraRayEffect extends AbstractGameEffect {
     private final float x;
     private final float y;
+
+    private static final String SOUND_ID = SoundManager.AURORA;
 
     public AuroraRayEffect(float x, float y) {
         this.x = x;
@@ -28,7 +27,7 @@ public class AuroraRayEffect extends AbstractGameEffect {
     public void update() {
         if (this.duration == this.startingDuration) {
 
-            CardCrawlGame.sound.play(makeID("AURORA"));
+            CardCrawlGame.sound.play(SOUND_ID);
 
             // Add initial border flash with aurora colors
             AbstractDungeon.effectsQueue.add(new BorderFlashEffect(Color.TEAL.cpy(), true));
@@ -52,7 +51,6 @@ public class AuroraRayEffect extends AbstractGameEffect {
         // Decrease duration
         this.duration -= com.badlogic.gdx.Gdx.graphics.getDeltaTime();
         if (this.duration < 0.0F) {
-            CardCrawlGame.sound.stop("AURORA");
             this.isDone = true;
         }
     }

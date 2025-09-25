@@ -42,9 +42,7 @@ public class ElectrifyingBarrierPower extends BasePower {
     @Override
     public void atEndOfRound() {
         int blockedDamage = accumulatedBlockThisTurn - owner.currentBlock;
-        if(blockedDamage < 0){
-            int i = 1;
-        }
+
         // Calculate Sparks to generate based on accumulated block and threshold
         sparksToGenerate = calculateSparks(blockedDamage);
 

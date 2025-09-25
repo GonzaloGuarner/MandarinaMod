@@ -1,5 +1,6 @@
 package mandarinamod.powers;
 
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -17,7 +18,7 @@ public class ThunderAspectPower extends BasePower {
     @Override
     public void atStartOfTurn() {
         flash();
-        addToBot(new DamageAllEnemiesAction(owner, DamageInfo.createDamageMatrix(this.amount, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.LIGHTNING));
+        addToBot(new ApplyPowerAction(owner, owner, new StaticPower(owner, amount), amount));
     }
 
     @Override

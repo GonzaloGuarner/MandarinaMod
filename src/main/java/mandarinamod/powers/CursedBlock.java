@@ -18,7 +18,7 @@ import static mandarinamod.MandarinaMod.imagePath;
 
 public class CursedBlock extends AbstractBlockModifier {
     public static final String ID = MandarinaMod.makeID("CursedBlock");
-    private int totalLostBlocks = 0;
+    private int totalLostBlock = 0;
 
     public CursedBlock() {}
 
@@ -30,12 +30,12 @@ public class CursedBlock extends AbstractBlockModifier {
     @Override
     public void onThisBlockDamaged(DamageInfo info, int lostAmount) {
         // Accumulate the total blocks lost
-        totalLostBlocks += lostAmount;
+        totalLostBlock += lostAmount;
 
         // Check if all blocks have been removed
         if (getCurrentAmount() <= 0) {
             // Calculate poison amount based on total blocks lost
-            int poisonAmount = totalLostBlocks / 2;
+            int poisonAmount = totalLostBlock / 2;
 
             // Apply poison if poisonAmount is greater than 0
             if (owner != null && poisonAmount > 0) {
@@ -43,7 +43,7 @@ public class CursedBlock extends AbstractBlockModifier {
             }
 
             // Reset the totalLostBlocks after applying poison
-            totalLostBlocks = 0;
+            totalLostBlock = 0;
         }
     }
 
@@ -59,11 +59,10 @@ public class CursedBlock extends AbstractBlockModifier {
         //this.flash(); // Provide visual feedback for block type
     }
 
-//    @Override
-//    public void atEndOfRound() {
-//        // Trigger when block is lost fully at the end of the round
-//        this.reduceThisBlockContainer(this.getCurrentAmount()); // Fully reduce block
-//    }
+    @Override
+    public void atEndOfRound() {
+        totalLostBlock = 0;
+    }
 
     @Override
     public Texture customBlockImage(){

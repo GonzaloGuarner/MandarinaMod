@@ -1,6 +1,6 @@
-package mandarinamod.cards.uncommon;
+package mandarinamod.cards.unused;
 
-import com.badlogic.gdx.graphics.Color;
+import basemod.patches.com.megacrit.cardcrawl.screens.compendium.CardLibraryScreen.NoCompendium;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -17,6 +17,7 @@ import mandarinamod.util.CardUtils;
 import mandarinamod.util.ColorUtils;
 import mandarinamod.util.CustomTags;
 
+@NoCompendium
 public class SparkJab extends BaseCard {
     public static final String ID = makeID(SparkJab.class.getSimpleName());
     private static final CardStats info = new CardStats(
@@ -43,7 +44,7 @@ public class SparkJab extends BaseCard {
                 AbstractGameAction.AttackEffect.NONE));
         addToBot(new VFXAction(new FlashAtkImgEffect(m.hb.cX, m.hb.cY, AbstractGameAction.AttackEffect.FIRE), 0.1F));
         // Check if played in an Odd position
-        if (CardUtils.isOddPosition()) {
+        if (CardUtils.isOddPosition() || CardUtils.isPerfectPosition()) {
             // Draw 1 card
             addToBot(new DrawCardAction(1));
         }

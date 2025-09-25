@@ -21,7 +21,9 @@ import hlysine.friendlymonsters.characters.AbstractPlayerWithMinions;
 import mandarinamod.cards.basic.*;
 import mandarinamod.cards.common.*;
 import mandarinamod.cards.rare.*;
+import mandarinamod.cards.rare.Ignite;
 import mandarinamod.cards.uncommon.*;
+import mandarinamod.powers.PerfectPositionPower;
 import mandarinamod.relics.TheCycleCompass;
 
 import java.util.ArrayList;
@@ -145,18 +147,20 @@ public class Mandarina extends AbstractPlayerWithMinions {
         //List of IDs of cards for your starting deck.
         //If you want multiple of the same card, you have to add it multiple times.
 //        retVal.add(ShotInTheDark.ID);
-        retVal.add(Strike.ID);
-        retVal.add(Strike.ID);
-        retVal.add(Strike.ID);
-        retVal.add(Strike.ID);
-        retVal.add(Defend.ID);
-        retVal.add(Defend.ID);
-        retVal.add(Defend.ID);
-        retVal.add(Defend.ID);
+//        retVal.add(Strike.ID);
+//        retVal.add(Strike.ID);
+//        retVal.add(Strike.ID);
+//        retVal.add(Strike.ID);
+//        retVal.add(Defend.ID);
+//        retVal.add(Defend.ID);
+//        retVal.add(Defend.ID);
+//        retVal.add(Defend.ID);
         retVal.add(SwiftJab.ID);
-        retVal.add(Recall.ID);
- //     retVal.add(DragonsBreath.ID);
-//        retVal.add(CracklingArc.ID);
+        retVal.add(SparkingThings.ID);
+         retVal.add(GoWithTheFlow.ID);
+     retVal.add(AuroraRay.ID);
+        retVal.add(CrossCurrents.ID);
+        retVal.add(OddSmokes.ID);
 
         return retVal;
     }

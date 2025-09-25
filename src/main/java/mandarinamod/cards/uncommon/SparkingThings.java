@@ -4,6 +4,7 @@ package mandarinamod.cards.uncommon;
 import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.MultiCardPreview;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.MultiUpgradeCard;
 import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.FleetingField;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.unique.AddCardToDeckAction;
@@ -16,6 +17,7 @@ import mandarinamod.cards.tempcards.FuelReserve;
 import mandarinamod.cards.tempcards.Spark;
 import mandarinamod.character.Mandarina;
 import mandarinamod.util.CardStats;
+import mandarinamod.vfx.combat.SparkingThingsEffect;
 
 public class SparkingThings extends BaseCard {
     public static final String ID = MandarinaMod.makeID(SparkingThings.class.getSimpleName());
@@ -57,6 +59,7 @@ public class SparkingThings extends BaseCard {
         if(isPreview){
             return;
         }
+        addToBot(new VFXAction(new SparkingThingsEffect(player.hb.cX, player.hb.cY, this.magicNumber)));
         // Add Sparks to hand
         addToBot(new MakeTempCardInHandAction(new Spark(), magicNumber));
         // Add Fuel Reserve to the deck

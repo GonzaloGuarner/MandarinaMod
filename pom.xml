@@ -24,29 +24,29 @@
 
     <!-- This information will be displayed in ModTheSpire, the modded launcher. -->
     <name>Mandarina Mod</name>
-    <version>0.1.10</version>
+    <version>0.2.0</version>
     <!-- Avoid using \ in this description, as they can cause the description to fail to load. -->
     <!-- If you really want to use them, you'll need to "escape" them by putting another one in front, like \\ -->
     <description>
-        Mandarina was once a spirited player of games of luck and mischief,\n
+        Mandarina was once a spirited player of games of luck and mischief,
         always seeking the next clever trick or cheeky tactic to outwit his friends and rivals.\n
-        \n
-        But one fateful day, his life took an unforeseen turn—\n
-        a game he couldn't win and a debt he couldn't escape.\n
+
+        But one fateful day, his life took an unforeseen turn...
+        a game he couldn't win and a debt he couldn't escape.
         He's now trapped in the spire. \n
-        \n
-        Ascending like a chaotic vortex. \n
-        Striking with thunderous precision.\n
-        Sometimes burning in flames.\n
-        Sometimes looming in the shadows.
-        \n
-        What drives him? Revenge? Redemption? Or the burning desire to prove that even the most elusive forces\n
-        can be wielded not by a steady hand but by the most volatile of them all.
-        \n
-        Will his cunning be enough to outplay his past and reclaim his joy?\n
+
+        Ascending like a chaotic vortex.
+        Striking with thunderous precision.
+        Sometimes burning in flames.
+        Sometimes looming in the shadows. \n
+
+        What drives him? Redemption? Revenge? Or the burning desire to prove that even the most elusive forces
+        can be wielded not by a steady hand but by the most volatile of them all. \n
+
+        Will his cunning be enough to outplay his past and reclaim his joy?
         Or will the final game consume him into an empty void?\n
-        \n
-        It's your move.
+
+        Your move.
     </description>
 
 

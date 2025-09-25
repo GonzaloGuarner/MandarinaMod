@@ -1,6 +1,7 @@
 package mandarinamod.cards.rare;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -32,6 +33,8 @@ public class AuroraRay extends BaseCard {
     private static final int UPGRADE_DAMAGE = 0;  // Damage increase when upgraded
     private static final int UPGRADE_COST = 4;    // Reduced cost when upgraded
 
+    int costSaved = 0;
+
     public AuroraRay() {
         super(ID, info);
         setDamage(DAMAGE, UPGRADE_DAMAGE);
@@ -46,20 +49,20 @@ public class AuroraRay extends BaseCard {
         }
 
         this.addToBot(new VFXAction(new AuroraRayEffect(m.hb.cX, m.hb.cY)));
-        this.updateCost(upgraded ? UPGRADE_COST : UPGRADE_COST+1);
-
-
         // Deal massive single-target damage
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.NONE));
-    }
+        resetCost();
 
+    }
+    void resetCost(){
+        costSaved = UPGRADE_COST - this.cost;
+        if(!upgraded) costSaved++;
+        updateCost(costSaved);
+    }
     @Override
     public void triggerOnEndOfTurnForPlayingCard() {
-        // Reduce the card cost by unspent energy at the end of the player's turn
-        int unspentEnergy = EnergyPanel.totalCount;
-        if (unspentEnergy > 0) {
-            this.updateCost(-unspentEnergy);
-        }
+        costSaved += EnergyPanel.totalCount;
+        updateCost(-EnergyPanel.totalCount);
     }
 
     @Override
@@ -75,10 +78,6 @@ public class AuroraRay extends BaseCard {
     @Override
     public void resetAttributes() {
         super.resetAttributes();
-        // Cost doesn't go below 0 after reduction
-        if (this.cost < 0) {
-            this.cost = 0;
-        }
     }
 
     @Override

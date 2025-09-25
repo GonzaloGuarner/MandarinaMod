@@ -12,7 +12,7 @@ import mandarinamod.MandarinaMod;
 public class BurntPower extends BasePower implements HealthBarRenderPower {
     public static final String POWER_ID = MandarinaMod.makeID(BurntPower.class.getSimpleName());
     private static final String NAME = "Burnt";
-    private static final Color burntColor = new Color(220F / 255.0F, 160F / 255.0F, 0f, 1f);
+    private static final Color burntColor = new Color(242F / 255.0F, 82F / 255.0F, 12F / 255.0F, 1f);
 
     public BurntPower(AbstractCreature owner, int amount) {
         super(POWER_ID, PowerType.DEBUFF, true, owner, amount);
@@ -21,14 +21,14 @@ public class BurntPower extends BasePower implements HealthBarRenderPower {
     }
 
     @Override
-    public void atEndOfTurn(boolean isPlayer) {
+    public void atStartOfTurn() {
         flash();
         // Deal damage equal to the current stack amount
-        addToBot(new DamageAction(this.owner, new DamageInfo(this.owner, this.amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+        addToBot(new DamageAction(this.owner, new DamageInfo(this.owner, this.amount, DamageInfo.DamageType.HP_LOSS), AbstractGameAction.AttackEffect.FIRE));
         // Halve the burn stacks (rounding down)
         this.amount = this.amount / 2;
         if (this.amount == 0) {
-            addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this.POWER_ID));
+            addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
         }
         updateDescription();
     }

@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import mandarinamod.MandarinaMod;
+import mandarinamod.actions.DragonsBreathCostAction;
 import mandarinamod.cards.BaseCard;
 import mandarinamod.character.Mandarina;
 import mandarinamod.powers.BurntPower;
@@ -34,7 +35,7 @@ public class DragonsBreath extends BaseCard implements BranchingUpgradesCard {
     private static final int UPGRADED_BURNT = 2;
     private static final int UPGRADED_DAMAGE2 = 0;
     private static final int UPGRADED_BURNT2 = 5;
-    private static final int BURNT_THRESHOLD = 4;
+    private static final int BURNT_THRESHOLD = 3;
     private static final int BURNT_THRESHOLD_UPGRADED = -1;
 
     private boolean upgradeBranchOne = true; // Tracks which branch is active
@@ -45,16 +46,12 @@ public class DragonsBreath extends BaseCard implements BranchingUpgradesCard {
         setMagic(BASE_BURNT); // Burnt applied
         setCustomVar("burntthreshold", BURNT_THRESHOLD, BURNT_THRESHOLD_UPGRADED);
         initializeDescription();
-
-        if (CardCrawlGame.dungeon != null && AbstractDungeon.currMapNode != null) {
-            this.configureCosts();
-        }
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn)));
-        addToBot(new ApplyPowerAction(m, p, new BurntPower(m, this.magicNumber), this.magicNumber));
+        addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL)));
+        addToBot(new ApplyPowerAction(m, p, new BurntPower(m, magicNumber), magicNumber));
         addToBot(new MakeTempCardInDiscardAction(new Burn(), 1));
         if (this.upgraded && !upgradeBranchOne) { // Upgrade Path 2: Burns to Draw+Discard
             addToBot(new MakeTempCardInDrawPileAction(new Burn(), 1, true, true));
@@ -63,35 +60,23 @@ public class DragonsBreath extends BaseCard implements BranchingUpgradesCard {
 
 
     @Override
+    public void atTurnStart() {
+        configureCosts();
+    }
+
+    @Override
     public void applyPowers() {
         super.applyPowers();
-        if (CardCrawlGame.dungeon != null && AbstractDungeon.currMapNode != null) {
-            this.configureCosts();
-        }
+        configureCosts();
     }
 
-
+    @Override
+    public void triggerOnOtherCardPlayed(AbstractCard c) {
+        configureCosts();
+    }
     public void configureCosts() {
-        MonsterGroup monsterGroup = AbstractDungeon.getMonsters();
-        if(monsterGroup == null) return;
-        ArrayList<AbstractMonster> monsters = AbstractDungeon.getMonsters().monsters;
-        if(monsters.isEmpty()) return;
-        int totalBurnt = monsters.stream()
-                .filter(monster -> !monster.isDeadOrEscaped())
-                .mapToInt(monster -> monster.hasPower(BurntPower.POWER_ID)
-                        ? monster.getPower(BurntPower.POWER_ID).amount
-                        : 0)
-                .sum();
-
-        int modifiedCost = Math.max(0, this.baseCost - (totalBurnt / customVar("burntthreshold"))); // Reduce cost based on Burnt stacks
-        if (this.baseCost != modifiedCost) {
-            updateCost(modifiedCost-baseCost);
-            if(this.cost != baseCost){
-                this.isCostModified = true; // Mark that the cost is modified
-            }
-        }
+        addToBot(new DragonsBreathCostAction(this));
     }
-
 
     @Override
     public void upgrade() {
@@ -108,7 +93,7 @@ public class DragonsBreath extends BaseCard implements BranchingUpgradesCard {
 
 
     public void baseUpgrade() {
-        upgradeDamage(UPGRADED_DAMAGE);
+        //upgradeDamage(UPGRADED_DAMAGE);
         upgradeMagicNumber(UPGRADED_BURNT);
         this.rawDescription = cardStrings.DESCRIPTION;
         upgradeBranchOne = true;
@@ -118,11 +103,15 @@ public class DragonsBreath extends BaseCard implements BranchingUpgradesCard {
 
 
     public void branchUpgrade() {
-        upgradeDamage(UPGRADED_DAMAGE2);
+        //upgradeDamage(UPGRADED_DAMAGE2);
         upgradeMagicNumber(UPGRADED_BURNT2);
         this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
         upgradeBranchOne = false;
         initializeDescription();
+    }
+
+    public int BaseCost() {
+        return this.baseCost;
     }
 
     @Override
