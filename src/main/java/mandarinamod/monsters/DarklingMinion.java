@@ -24,11 +24,14 @@ public class DarklingMinion extends AbstractIntentFriendlyMonster {
     public static final String NAME = monsterStrings.NAME;
     public static final String[] MOVES = monsterStrings.MOVES;
     public static final String[] DIALOG = monsterStrings.DIALOG;
+    private static final String imageUrl = "mandarinamod/images/monsters/darkling/Darkling.png";
     private static final int HP_MIN = 6;
     private static final int HP_MAX = 9;
+    private static final int UPGRADE_HP= 2;
     private static final int CHOMP_DMG = 3;
     private static final int UPGRADE_DMG = 5;
     private static final int BLOCK_AMT = 4;
+
      private boolean isReviving = false;
     private boolean renderCheckpoint = false;
     private boolean isUpgraded = false;
@@ -36,33 +39,18 @@ public class DarklingMinion extends AbstractIntentFriendlyMonster {
     private AbstractMonster target;
 
     public DarklingMinion(float x, float y, boolean upgraded) {
-        super(NAME, MONSTER_ID, MathUtils.random(HP_MIN, HP_MAX), 0.0F, 0,  upgraded? 250:200f,  upgraded? 200:150f, "mandarinamod/images/monsters/darkling/Darkling.png", x, y);
+        super(NAME, MONSTER_ID, getRNGHp(upgraded), 0.0F, 0,  upgraded? 250:200f,  upgraded? 200:150f, imageUrl, x, y);
         this.isUpgraded = upgraded;
-        this.scale = this.isUpgraded? 1f:0.5f;
+        this.scale = this.isUpgraded? 0.75f:0.5f;
         this.damage.add(new DamageInfo(this, this.isUpgraded?UPGRADE_DMG:CHOMP_DMG));
-        //addMoves();
-        //this.setMove((byte)1, Intent.ATTACK, 0, 2, true);
     }
+    private static int getRNGHp(boolean upgraded) {
+        int hpOffset = upgraded ? UPGRADE_HP : 0;
+        int minHp = HP_MIN + hpOffset;
+        int maxHp = HP_MAX + hpOffset;
 
-    private void addMoves(){
-//        moves.addMove(new MinionMove("Chomp", this, chompTexture, "Deal " + CHOMP_DMG + " damage twice.", () -> {
-//            target = AbstractDungeon.getRandomMonster();
-//            DamageInfo info = new DamageInfo(this, isUpgraded?UPGRADE_DMG:CHOMP_DMG, DamageInfo.DamageType.NORMAL);
-//            //info.applyPowers(this, target); // <--- This lets powers effect minions attacks
-//            AbstractDungeon.actionManager.addToBottom(new DamageAction(target, info));
-//            AbstractDungeon.actionManager.addToBottom(new DamageAction(target, info));
-//        }));
-//        moves.addMove(new MinionMove("Harden", this, hardenTexture, "Gain " + BLOCK_AMT + " Block and apply Regrow.", () -> {
-//            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this, this,  isUpgraded?BLOCK_AMT+2:BLOCK_AMT));
-//         }));
-//        moves.addMove(new MinionMove("Nip", this, nipTexture, "Deal " + NIP_DMG + " damage.", () -> {
-//            target = AbstractDungeon.getRandomMonster();
-//            DamageInfo info = new DamageInfo(this, NIP_DMG, DamageInfo.DamageType.NORMAL);
-//            //info.applyPowers(this, target); // <--- This lets powers effect minions attacks
-//            AbstractDungeon.actionManager.addToBottom(new DamageAction(target, info, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-//        }));
+        return MathUtils.random(minHp, maxHp);
     }
-
 
     @Override
     public void usePreBattleAction() {
@@ -82,13 +70,13 @@ public class DarklingMinion extends AbstractIntentFriendlyMonster {
     @Override
     public void getMove(int num) {
         if (this.halfDead) {
-            this.setMove((byte) 5, Intent.BUFF);
+            this.setMove((byte) 2, Intent.BUFF);
         }else{
-            isBlockMove = MathUtils.randomBoolean();
+            isBlockMove = num<50;
             if(isBlockMove){
-                this.setMove((byte)2, Intent.DEFEND);
+                this.setMove((byte)0, Intent.DEFEND);
             }else{
-                this.setMove((byte)3, Intent.ATTACK, this.damage.get(0).base,2, true);
+                this.setMove((byte)1, Intent.ATTACK, this.damage.get(0).base,2, true);
             }
         }
         this.createIntent();
@@ -99,7 +87,7 @@ public class DarklingMinion extends AbstractIntentFriendlyMonster {
                 AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this, this,  isUpgraded?BLOCK_AMT+2:BLOCK_AMT));
             }else{
                 target = AbstractDungeon.getRandomMonster();
-                DamageInfo info = new DamageInfo(this, isUpgraded?UPGRADE_DMG:CHOMP_DMG, DamageInfo.DamageType.NORMAL);
+                DamageInfo info = damage.get(0);
                 //info.applyPowers(this, target); // <--- This lets powers effect minions attacks
                 AbstractDungeon.actionManager.addToBottom(new DamageAction(target, info));
                 AbstractDungeon.actionManager.addToBottom(new DamageAction(target, info));
@@ -116,8 +104,11 @@ public class DarklingMinion extends AbstractIntentFriendlyMonster {
             } else {
                 AbstractDungeon.actionManager.addToBottom(new SFXAction("DARKLING_REGROW_1", MathUtils.random(-0.1F, 0.1F)));
             }
-
+            addToBot(new RemoveSpecificPowerAction(this, this, LifeLinkPower.POWER_ID));
+            addToBot(new RemoveSpecificPowerAction(AbstractDungeon.player, this, LifeLinkPower.POWER_ID));
             AbstractDungeon.actionManager.addToBottom(new HealAction(this, this, 10));
+
+
             isReviving = halfDead = false;
         }
     }

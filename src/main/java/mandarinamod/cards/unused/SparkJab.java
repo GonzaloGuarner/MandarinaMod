@@ -23,7 +23,7 @@ public class SparkJab extends BaseCard {
     private static final CardStats info = new CardStats(
             Mandarina.Meta.CARD_COLOR, // Specific card color for Mandarina
             CardType.ATTACK, // Attack card
-            CardRarity.UNCOMMON, // Rarity Uncommon
+            CardRarity.SPECIAL, // Rarity Uncommon
             CardTarget.ENEMY, // Targets a single enemy
             0 // Energy cost 0
     );

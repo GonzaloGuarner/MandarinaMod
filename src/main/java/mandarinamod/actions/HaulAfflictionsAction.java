@@ -2,6 +2,7 @@ package mandarinamod.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -31,10 +32,11 @@ public class HaulAfflictionsAction extends AbstractGameAction {
                     .filter(power -> power.type == AbstractPower.PowerType.DEBUFF)
                     .count();
             damageArray[i] = debuffCount * magicNumber;
+            addToBot(new LoseHPAction(monster, player, damageArray[i], AttackEffect.POISON));
         }
 
         // Deal the calculated damage to all enemies
-        addToTop(new DamageAllEnemiesAction(player, damageArray, damageType, AttackEffect.POISON, true));
+//        addToTop(new DamageAllEnemiesAction(player, damageArray, damageType, AttackEffect.POISON, true));
 
         isDone = true;
     }

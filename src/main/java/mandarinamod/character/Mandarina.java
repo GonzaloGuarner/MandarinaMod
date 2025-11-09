@@ -89,7 +89,7 @@ public class Mandarina extends AbstractPlayerWithMinions {
 
     //In-game images
     private static final String SHOULDER_1 = characterPath("shoulder.png"); //Shoulder 1 and 2 are used at rest sites.
-    private static final String SHOULDER_2 = characterPath("shoulder2.png");
+    private static final String SHOULDER_2 = characterPath("shoulder.png");
     private static final String CORPSE = characterPath("corpse.png"); //Corpse is when you die.
 
     //Textures used for the energy orb
@@ -147,20 +147,20 @@ public class Mandarina extends AbstractPlayerWithMinions {
         //List of IDs of cards for your starting deck.
         //If you want multiple of the same card, you have to add it multiple times.
 //        retVal.add(ShotInTheDark.ID);
-//        retVal.add(Strike.ID);
-//        retVal.add(Strike.ID);
-//        retVal.add(Strike.ID);
-//        retVal.add(Strike.ID);
-//        retVal.add(Defend.ID);
-//        retVal.add(Defend.ID);
-//        retVal.add(Defend.ID);
-//        retVal.add(Defend.ID);
+        retVal.add(Strike.ID);
+        retVal.add(Strike.ID);
+        retVal.add(Strike.ID);
+        retVal.add(Strike.ID);
+        retVal.add(Defend.ID);
+        retVal.add(Defend.ID);
+        retVal.add(Defend.ID);
+        retVal.add(Defend.ID);
         retVal.add(SwiftJab.ID);
-        retVal.add(SparkingThings.ID);
-         retVal.add(GoWithTheFlow.ID);
-     retVal.add(AuroraRay.ID);
-        retVal.add(CrossCurrents.ID);
-        retVal.add(OddSmokes.ID);
+        retVal.add(Recall.ID);
+//         retVal.add(GoWithTheFlow.ID);
+//     retVal.add(ThunderAspect.ID);
+//        retVal.add(StaticCharge.ID);
+//        retVal.add(OddSmokes.ID);
 
         return retVal;
     }

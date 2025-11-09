@@ -65,7 +65,7 @@
   },
   "${modID}:CrossCurrents": {
     "NAME": "Cross Currents",
-    "DESCRIPTION": "EVERYONE loses !M! Block. NL If you have ${modID}:Flow, deal !D! damage to a random enemy for each target hit.",
+    "DESCRIPTION": "EVERYONE loses !M! Block. NL If you have ${modID}:Flow, deal !D! damage to a random enemy per target hit.",
     "UPGRADE_DESCRIPTION": "EVERYONE loses !M! Block. NL If you have ${modID}:Flow, deal !D! damage to a random enemy per target hit."
   },
   "${modID}:ShadowPunch": {
@@ -270,8 +270,8 @@
   },
   "${modID}:UmbralEchoes": {
     "NAME": "Umbral Echoes",
-    "DESCRIPTION": "Replay the top card in your discard pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Replay one of the top two cards in your discard pile. NL Exhaust."
+    "DESCRIPTION": "Play the top card in your discard pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Play one of the top two cards in your discard pile. NL Exhaust."
   },
   "${modID}:ShotInTheDark": {
     "NAME": "Shot in the Dark",
@@ -380,8 +380,8 @@
   },
   "${modID}:HaulAfflictions": {
     "NAME": "Haul Afflictions",
-    "DESCRIPTION": "Apply 3 ${modID}:Choke to ALL enemies. NL Deal !M! damage to ALL enemies for each debuff they have.",
-    "UPGRADE_DESCRIPTION": "Apply 4 ${modID}:Choke and 1 Weak to ALL enemies. NL Deal !M! damage to ALL enemies for each debuff they have."
+    "DESCRIPTION": "Apply 3 ${modID}:Choke to ALL enemies. NL ALL enemies lose !M! HP for each debuff they have.",
+    "UPGRADE_DESCRIPTION": "Apply 4 ${modID}:Choke and 1 Weak to ALL enemies. NL ALL enemies lose !M! HP for each debuff they have."
   },
   "${modID}:ShadowRitual": {
     "NAME": "Shadow Ritual",
